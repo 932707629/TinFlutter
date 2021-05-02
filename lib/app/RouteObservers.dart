@@ -8,7 +8,7 @@ class RouteObservers extends NavigatorObserver{
   void didPush(Route route, Route previousRoute) {
     // TODO: implement didPush
     super.didPush(route, previousRoute);
-    print("当前路由页: $route.settings.name");
+    print("当前路由页: ${route.settings.name}");
   }
 
   @override

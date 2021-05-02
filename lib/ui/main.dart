@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:tin_flutter/app/Routes.dart';
 import 'package:tin_flutter/ui/MainPage.dart';
 import '../app/RouteObservers.dart';
 
@@ -17,10 +18,6 @@ void main() {
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  Map<String, WidgetBuilder> routePages = {
-    "new_routes": (context) => ModalRoute.of(context).settings.arguments,
-    "/": (context) => MainPage(title: "Tin Flutter"),
-  };
 
   // This widget is the root of your application.
   @override
@@ -40,7 +37,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      routes: routePages,
+      routes: Routes.routePages,
       navigatorObservers: [RouteObservers()],
     );
   }
