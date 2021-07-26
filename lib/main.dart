@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tin_flutter/app/Routes.dart';
 import 'package:tin_flutter/ui/MainPage.dart';
-import '../app/RouteObservers.dart';
+import 'app/RouteObservers.dart';
 
 void main() {
   runZonedGuarded(() => runApp(MyApp()), (Object obj, StackTrace stack) {
