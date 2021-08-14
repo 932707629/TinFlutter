@@ -1,0 +1,33 @@
+{
+
+  "app_name": "Flutter示例",
+  "home": "首页",
+  "activity": "活动",
+  "other": "其他",
+  "greet": "你好~",
+  "language": "语言",
+  "count": "GetX计数器",
+  "storage": "轻量存储",
+  "connect": "网络请求",
+  "theme": "主题",
+  "dio_get":"dio get",
+  "dio_post":"dio post",
+  "getx_get": "getx Get",
+  "getx_post": "getx Post",
+  "pick_time": "选择时间",
+  "sayHello": "你好 {name}",
+  "multiple": "多布局",
+  "userEventBus": "欢迎使用EventBus",
+  "permissionDenied": "权限已被拒绝",
+
+  "ac_unit": "雪花",
+  "access_alarm": "闹钟",
+  "accessibility": "健康",
+  "account_balance": "酒店",
+  "account_balance_wallet": "钱包",
+  "add_a_photo": "摄影",
+  "add_moderator": "安全",
+  "add_shopping_cart": "购物"
+
+
+}

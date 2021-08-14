@@ -1,9 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tin_flutter/app/Routes.dart';
-import 'package:tin_flutter/ui/MainPage.dart';
+import 'app/AppData.dart';
 import 'app/RouteObservers.dart';
+import 'app/index.dart';
+import 'generated/l10n.dart';
 
 void main() {
   runZonedGuarded(() => runApp(MyApp()), (Object obj, StackTrace stack) {
@@ -22,23 +26,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      initialRoute: "/",
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      routes: Routes.routePages,
+    AppData.initData();///初始化本地数据
+    if(inProduct()){ logger.close(); }///生产环境关闭日志输出
+    var locales = S.delegate.supportedLocales;
+    return GetMaterialApp(
+      enableLog: true,
+      initialRoute: Routes.main,
+      getPages: Routes.getPages,
       navigatorObservers: [RouteObservers()],
+      locale: locales[1],
+      supportedLocales: locales,
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate, // 指定本地化的字符串和一些其他的值
+        GlobalCupertinoLocalizations.delegate, // 对应的Cupertino风格
+        GlobalWidgetsLocalizations.delegate, // 指定默认的文本排列方向, 由左到右或由右到左
+      ],
+      fallbackLocale: locales[1], //添加一个默认语言选项，以备上面指定的语言翻译 不存在
     );
   }
 }

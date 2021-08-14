@@ -1,6 +1,7 @@
 
 import 'package:event_bus/event_bus.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:logger/logger.dart';
 import 'package:rxdart/rxdart.dart';
 ///普通事件
 EventBus eventBus=new EventBus();
@@ -12,3 +13,13 @@ void showToast(String message){
   Fluttertoast.showToast(msg: message,gravity: ToastGravity.CENTER);
 }
 
+
+var logger=Logger(
+  printer: PrettyPrinter(
+    printTime: true,
+  ),
+);
+///判断程序当前的运行环境
+bool inProduct(){
+  return const bool.fromEnvironment("dart.vm.product");
+}

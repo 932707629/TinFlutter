@@ -1,0 +1,31 @@
+{
+  "app_name": "Flutter Demo",
+  "home": "Home",
+  "activity": "activity",
+  "other": "other",
+  "greet": "hello~",
+  "language": "Language",
+  "count": "GetX Count",
+  "storage": "Storage",
+  "connect": "Connect",
+  "theme": "Theme",
+  "dio_get":"dio get",
+  "dio_post":"dio post",
+  "getx_get": "getx Get",
+  "getx_post": "getx Post",
+  "pick_time": "Pick a time",
+  "sayHello": "hello {name}",
+  "multiple": "Multiple layout",
+  "userEventBus": "Welcome to EventBus",
+  "permissionDenied": "Permission denied",
+
+  "ac_unit": "ac unit",
+  "access_alarm": "access alarm",
+  "accessibility": "accessibility",
+  "account_balance": "account balance",
+  "account_balance_wallet": "account balance wallet",
+  "add_a_photo": "add a photo",
+  "add_moderator": "add moderator",
+  "add_shopping_cart": "add shopping cart"
+
+}
