@@ -1,6 +1,6 @@
 # TinFlutter
 
-##环境配置要求
+## 环境配置要求
 
 基于Flutter2.2.3、Dart2.13.4版本开发，使用的三方库都适配了空安全。
 目前可运行于Android iOS Web三种平台
@@ -27,14 +27,14 @@
 - Shared preferences轻量级存储[Shared preferences plugin](https://pub.dev/packages/shared_preferences)
 - 包含上述框架的简单演示源码
 
-###参考文档
+### 参考文档
 
 - Flutter GetX使用---简洁的魅力！[Flutter GetX使用---简洁的魅力！](https://juejin.cn/post/6924104248275763208)
 - Flutter实现国际化[Flutter(十七) 实现国际化](https://blog.csdn.net/zhongad007/article/details/106470787/)
 - dio使用文档[dio使用文档](https://github.com/flutterchina/dio/blob/master/README-ZH.md)
 - json2dart工具网址[json2dart工具网址](https://caijinglong.github.io/json2dart/index_ch.html)
 
-###其他常用框架
+### 其他常用框架
 
 - 网络框架Dio[网络框架Dio](https://github.com/flutterchina/dio)
 - Retrofit.dart网络框架[Retrofit.dart网络框架](https://github.com/trevorwang/retrofit.dart/)
@@ -43,7 +43,7 @@
 - 轻量存储库Hive[轻量存储库Hive](https://github.com/hivedb/hive)
 
 
-###问题
+### 问题
 
 - flutter for web中的跨域问题[flutter for web跨域解决方案](https://www.cnblogs.com/lcosima/p/14504254.html)
 
