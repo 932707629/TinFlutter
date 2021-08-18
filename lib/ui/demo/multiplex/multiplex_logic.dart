@@ -14,7 +14,7 @@ class MultiplexLogic extends GetxController {
   void onReady() {
     super.onReady();
     subscription = behaviorBus.on<EventTaskBean>().listen((event) {
-      print("收到消息了${event.value}");
+      logger.i("${S.current.sayHello(event.value)}");
       showToast(S.current.sayHello(event.value));
     });
   }
@@ -24,4 +24,8 @@ class MultiplexLogic extends GetxController {
     super.onClose();
     subscription?.cancel();
   }
+
+  void increase() => state.count.value+=50;
+
+
 }

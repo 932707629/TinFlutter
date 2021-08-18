@@ -5,7 +5,7 @@ class CountState {
     ///Initialize variables
   }
 
-  var count = RxInt(0);
+  var count = 0.obs;
 
 
 }

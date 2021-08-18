@@ -35,17 +35,32 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.soushin.tin_flutter"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
-
+    signingConfigs {
+        config {
+            keyAlias 'tin_flutter'
+            keyPassword '123456'
+            storeFile file('../tin_flutter.jks')
+            storePassword '123456'
+        }
+    }
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            // 自定义文件名{示例：AppName-Flavor-debug-v1.0.0_201807301409}
+            outputFileName = "flutter${variant.flavorName}_${variant.buildType.name}_${variant.versionName}.apk"
         }
     }
 }

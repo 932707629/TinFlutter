@@ -190,6 +190,46 @@ class S {
     );
   }
 
+  /// `Permission`
+  String get permission {
+    return Intl.message(
+      'Permission',
+      name: 'permission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `WebView`
+  String get webview {
+    return Intl.message(
+      'WebView',
+      name: 'webview',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Picture Selector`
+  String get pictureSelector {
+    return Intl.message(
+      'Picture Selector',
+      name: 'pictureSelector',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `RxDart`
+  String get rx_dart {
+    return Intl.message(
+      'RxDart',
+      name: 'rx_dart',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Pick a time`
   String get pick_time {
     return Intl.message(

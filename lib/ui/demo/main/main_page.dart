@@ -5,9 +5,9 @@ import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/generated/l10n.dart';
 
-import 'dynamic_view.dart';
-import 'home_view.dart';
-import 'mine_view.dart';
+import 'dynamic_page.dart';
+import 'home_page.dart';
+import 'mine_page.dart';
 import 'main_logic.dart';
 import 'main_state.dart';
 
@@ -30,7 +30,6 @@ class _MainPageState extends State<MainPage> {
     SchedulerBinding.instance?.addPostFrameCallback((timeStamp) {
       EasyRefresh.defaultHeader = MaterialHeader();
       EasyRefresh.defaultFooter = MaterialFooter();
-      logic.checkPermission(context);
     });
     // List<String> tabs = [S.current.home, S.current.activity, S.current.other];
     return Scaffold(

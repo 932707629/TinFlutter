@@ -47,13 +47,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "multiple": MessageLookupByLibrary.simpleMessage("Multiple layout"),
         "other": MessageLookupByLibrary.simpleMessage("other"),
+        "permission": MessageLookupByLibrary.simpleMessage("Permission"),
         "permissionDenied":
             MessageLookupByLibrary.simpleMessage("Permission denied"),
         "pick_time": MessageLookupByLibrary.simpleMessage("Pick a time"),
+        "pictureSelector":
+            MessageLookupByLibrary.simpleMessage("Picture Selector"),
+        "rx_dart": MessageLookupByLibrary.simpleMessage("RxDart"),
         "sayHello": m0,
         "storage": MessageLookupByLibrary.simpleMessage("Storage"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "userEventBus":
-            MessageLookupByLibrary.simpleMessage("Welcome to EventBus")
+            MessageLookupByLibrary.simpleMessage("Welcome to EventBus"),
+        "webview": MessageLookupByLibrary.simpleMessage("WebView")
       };
 }

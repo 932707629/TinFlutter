@@ -44,11 +44,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("语言"),
         "multiple": MessageLookupByLibrary.simpleMessage("多布局"),
         "other": MessageLookupByLibrary.simpleMessage("其他"),
+        "permission": MessageLookupByLibrary.simpleMessage("权限"),
         "permissionDenied": MessageLookupByLibrary.simpleMessage("权限已被拒绝"),
         "pick_time": MessageLookupByLibrary.simpleMessage("选择时间"),
+        "pictureSelector": MessageLookupByLibrary.simpleMessage("图片选择器"),
+        "rx_dart": MessageLookupByLibrary.simpleMessage("RxDart使用"),
         "sayHello": m0,
         "storage": MessageLookupByLibrary.simpleMessage("轻量存储"),
         "theme": MessageLookupByLibrary.simpleMessage("主题"),
-        "userEventBus": MessageLookupByLibrary.simpleMessage("欢迎使用EventBus")
+        "userEventBus": MessageLookupByLibrary.simpleMessage("欢迎使用EventBus"),
+        "webview": MessageLookupByLibrary.simpleMessage("浏览器")
       };
 }

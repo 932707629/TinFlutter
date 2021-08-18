@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AppData.initData();///初始化本地数据
-    if(inProduct()){ logger.close(); }///生产环境关闭日志输出
     var locales = S.delegate.supportedLocales;
     return GetMaterialApp(
       enableLog: true,
