@@ -2,50 +2,53 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../index.dart';
 
 class HeaderBar extends StatefulWidget implements PreferredSizeWidget {
-  String title;
-  Color? backgroundColor = Colors.blue;
-  bool? darkMode = true;
-  HeaderBar(this.title, {this.backgroundColor,this.darkMode});
+
+  final String title;
+  final Color backgroundColor;
+  final bool darkMode;
+
+  HeaderBar(this.title, {this.backgroundColor=Colors.blue,this.darkMode = false});
 
   @override
   State<StatefulWidget> createState() => new HeaderBarState();
 
   @override
-  Size get preferredSize => new Size.fromHeight(FontSize.size_56);
+  Size get preferredSize => new Size.fromHeight(Numbers.size_56.h);
 
 }
 
 class HeaderBarState extends State<HeaderBar> {
   @override
   Widget build(BuildContext context) {
+    ///设置状态栏和导航栏主题风格
+    SystemChrome.setSystemUIOverlayStyle(widget.darkMode?SystemUiOverlayStyle.dark:SystemUiOverlayStyle.light);
     return Container(
+      padding: EdgeInsets.only(top: ScreenUtil().statusBarHeight,),
       color: widget.backgroundColor,
-      child: Container(
-        padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top,),
-        alignment: Alignment.centerLeft,
-        child: Stack(
-          children: [
-            Container(
-              alignment: Alignment.centerLeft,
-              child: IconButton(
-                icon: Icon(Icons.arrow_back,color: Colors.white,),
-                onPressed: () => Get.back(),
-              ),
+      alignment: Alignment.centerLeft,
+      child: Stack(
+        children: [
+          Container(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              icon: Icon(Icons.arrow_back,color: Colors.white,),
+              onPressed: () => Get.back(),
             ),
-            Container(
-              alignment: Alignment.center,
-              child: Text(
-                widget.title,
-                style: TextStyle(color: Colors.white, fontSize: FontSize.size_18),
-              ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: Text(
+              widget.title,
+              style: TextStyle(color: Colors.white, fontSize: Numbers.size_18.sp),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

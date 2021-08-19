@@ -41,6 +41,8 @@
 - [Get框架的快速、超轻量和同步键值存储](https://github.com/jonataslaw/get_storage)
 - [fish-redux闲鱼Flutter跨平台解决方案](https://github.com/alibaba/fish-redux)
 - [轻量存储库Hive](https://github.com/hivedb/hive)
+- [ImagePicker图片选择框架](https://pub.dev/packages/image_picker)
+
 
 
 ### 问题

@@ -31,7 +31,7 @@ class _ConnectPageState extends State<ConnectPage> {
           Wrap(
             spacing: 8,
             runSpacing: 4,
-            alignment: WrapAlignment.center,
+            alignment: WrapAlignment.start,
             children: [
               TextButton(
                 child: Text(S.of(context).getx_get),

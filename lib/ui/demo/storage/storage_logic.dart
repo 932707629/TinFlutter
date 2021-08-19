@@ -1,4 +1,8 @@
+import 'dart:math';
+
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/AppData.dart';
+import 'package:tin_flutter/app/index.dart';
 
 import 'storage_state.dart';
 
@@ -16,4 +20,12 @@ class StorageLogic extends GetxController {
     // TODO: implement onClose
     super.onClose();
   }
+
+  void increase(){
+    state.localIndex.value = Random().nextInt(Numbers.int_1000);
+    AppData.saveLocaleIndex(state.localIndex.value);
+  }
+
+
+
 }

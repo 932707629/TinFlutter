@@ -33,7 +33,7 @@ class LogConsoleFilter extends LogFilter{
   }
 }
 
-class FontSize{
+class Numbers{
 
   static final size_1=1.0;
   static final size_1_7=1.7;
@@ -77,6 +77,11 @@ class FontSize{
   static final size_100=100.0;
   static final size_150=150.0;
 
+  static final int_4=4;
+  static final int_10=10;
+  static final int_100=100;
+  static final int_300=300;
+  static final int_1000=1000;
 
 }
 

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:math';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:get/get.dart';
@@ -36,11 +36,11 @@ class _MultiplexPageState extends State<MultiplexPage>
               SliverList(
                 delegate: SliverChildListDelegate([
                   SizedBox(
-                    height: FontSize.size_150,
+                    height: Numbers.size_150.h,
                     child: PageView(children: getBannerWidget()),
                   ),
                   SizedBox(
-                    height: FontSize.size_150,
+                    height: Numbers.size_150.h,
                     child: buildGradView(context),
                   ),
                 ]),
@@ -53,8 +53,8 @@ class _MultiplexPageState extends State<MultiplexPage>
                         },
                         child: Card(
                           child: new Container(
-                            height: FontSize.size_60,
-                            padding: EdgeInsets.only(left: FontSize.size_20),
+                            height: Numbers.size_60.h,
+                            padding: EdgeInsets.only(left: Numbers.size_20.r),
                             alignment: Alignment.center,
                             child: new Text("Item $index",textAlign: TextAlign.center,),
                           ),
@@ -68,7 +68,7 @@ class _MultiplexPageState extends State<MultiplexPage>
           );
         },
         onRefresh: () async {
-          await Future.delayed(Duration(microseconds: FontSize.size_100.toInt()), () {
+          await Future.delayed(Duration(microseconds: Numbers.int_100), () {
             if (mounted) {
               ///此state对象当前在树中
               state.count.value=20;
@@ -76,7 +76,7 @@ class _MultiplexPageState extends State<MultiplexPage>
           });
         },
         onLoad: () async {
-          await Future.delayed(Duration(microseconds: FontSize.size_100.toInt()), () {
+          await Future.delayed(Duration(microseconds: Numbers.int_100), () {
             if (mounted) {
               logic.increase();
             }
@@ -126,8 +126,8 @@ class _MultiplexPageState extends State<MultiplexPage>
     ];
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: FontSize.size_4.toInt(),
-        childAspectRatio: FontSize.size_1_7,
+        crossAxisCount: Numbers.int_4,
+        childAspectRatio: Numbers.size_1_7,
       ),
       itemBuilder: (context, index) {
         var action = items[index];

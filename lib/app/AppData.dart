@@ -1,5 +1,5 @@
-import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tin_flutter/app/index.dart';
 
 /// 应用内数据缓存处理
 /// @author SouShin
@@ -7,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class AppData {
   // static Box? box;
   static SharedPreferences? prefs;
-  static var localIndex = RxInt(1);
 
   static void initData() {
     SharedPreferences.getInstance().then((value) =>
@@ -15,16 +14,13 @@ class AppData {
   }
 
   static void saveLocaleIndex(int index) async {
-    prefs?.setInt("locale_index", index).then((value) => {
-          if (value) {localIndex.value = index }
-        });
+    prefs?.setInt("locale_index", index);
   }
 
   static int queryLocaleIndex() {
     // SharedPreferences prefs = await SharedPreferences.getInstance();
-    localIndex.value = prefs?.getInt("locale_index") == null
-        ? 1
-        : prefs!.getInt("locale_index")!;
-    return localIndex.value;
+    return prefs?.getInt("locale_index") == null ? 1 : prefs!.getInt("locale_index")!;
   }
+
+
 }

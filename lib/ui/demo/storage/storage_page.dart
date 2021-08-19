@@ -3,8 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/AppData.dart';
+import 'package:tin_flutter/app/index.dart';
 import 'package:tin_flutter/generated/l10n.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'storage_logic.dart';
 import 'storage_state.dart';
 
@@ -30,13 +31,16 @@ class _StoragePageState extends State<StoragePage> {
       ),
       body: Center(
         child: Obx(
-              () => Text('${AppData.queryLocaleIndex()}', style: TextStyle(fontSize: 30.0)),
+              () => Text(
+                  '${state.localIndex.value}',
+                  style: TextStyle(fontSize: Numbers.size_30.sp)
+              ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_box),
         onPressed: () {
-          AppData.saveLocaleIndex(Random().nextInt(1000));
+          logic.increase();
         },
       ),
     );

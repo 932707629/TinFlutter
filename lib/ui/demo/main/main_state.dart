@@ -8,7 +8,7 @@ class MainState {
 
 
   var count = 40.obs;
-
+  var selectedIndex = 0.obs;
 
 
 }

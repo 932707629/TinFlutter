@@ -30,8 +30,8 @@ class _HomeState extends State<HomePage> {
       body: Column(
         children: [
           Wrap(
-            spacing: 8,
-            runSpacing: 4,
+            spacing: Numbers.size_8,
+            runSpacing: Numbers.size_4,
             alignment: WrapAlignment.start,
             children: [
               TextButton(
