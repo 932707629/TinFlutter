@@ -23,8 +23,9 @@
 2021-08-08
 新增
 ****注意 此次更新涉及空安全升级 项目所依赖的三方库需要支持空安全
-- Flutter GetX框架[GetX](https://github.com/jonataslaw/getx)
-- Shared preferences轻量级存储[Shared preferences plugin](https://pub.dev/packages/shared_preferences)
+- Flutter项目框架[GetX](https://github.com/jonataslaw/getx)
+- 轻量级存储框架[Shared preferences plugin](https://pub.dev/packages/shared_preferences)
+- 屏幕适配框架[flutter_screenutil](https://pub.dev/packages/flutter_screenutil)
 - 包含上述框架的简单演示源码
 
 ### 参考文档
