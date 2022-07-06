@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/Routes.dart';
+import 'package:tin_flutter/app/routes.dart';
 import 'package:tin_flutter/app/index.dart';
 import 'package:tin_flutter/generated/l10n.dart';
-import 'package:tin_flutter/ui/bean/EventTaskBean.dart';
+import 'package:tin_flutter/ui/bean/event_task_bean.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
 import 'main_logic.dart';

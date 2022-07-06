@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/AppData.dart';
+import 'package:tin_flutter/app/app_data.dart';
 import 'package:tin_flutter/app/index.dart';
 
 import 'storage_state.dart';

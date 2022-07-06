@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/AppData.dart';
+import 'package:tin_flutter/app/app_data.dart';
 import 'package:tin_flutter/app/index.dart';
 import 'package:tin_flutter/generated/l10n.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

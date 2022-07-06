@@ -5,10 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:tin_flutter/app/Routes.dart';
-import 'app/AppData.dart';
-import 'app/RouteObservers.dart';
-import 'app/index.dart';
+import 'package:tin_flutter/app/routes.dart';
+import 'app/app_data.dart';
+import 'app/route_observers.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -38,7 +37,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       //填入设计稿中设备的屏幕尺寸,单位dp
         designSize: Size(360, 690),
-        builder: () => GetMaterialApp(
+        builder: (e) => GetMaterialApp(
           enableLog: true,
           initialRoute: Routes.main,
           getPages: Routes.getPages,

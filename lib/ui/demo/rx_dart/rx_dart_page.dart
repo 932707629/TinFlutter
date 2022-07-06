@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Rx;
 import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/app/network/AppConnect.dart';
-import 'package:tin_flutter/app/widget/HeaderBar.dart';
+import 'package:tin_flutter/app/network/app_connect.dart';
+import 'package:tin_flutter/app/widget/header_bar.dart';
 import 'package:tin_flutter/generated/l10n.dart';
 import 'package:rxdart/rxdart.dart';
 import 'rx_dart_logic.dart';

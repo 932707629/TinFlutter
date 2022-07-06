@@ -1,7 +1,7 @@
 
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/app/network/AppConnect.dart';
+import 'package:tin_flutter/app/network/app_connect.dart';
 import 'package:tin_flutter/ui/bean/chapters_bean.dart';
 
 import 'connect_state.dart';

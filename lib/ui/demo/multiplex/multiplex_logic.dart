@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/index.dart';
 import 'package:tin_flutter/generated/l10n.dart';
-import 'package:tin_flutter/ui/bean/EventTaskBean.dart';
+import 'package:tin_flutter/ui/bean/event_task_bean.dart';
 
 import 'multiplex_state.dart';
 
