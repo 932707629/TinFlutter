@@ -36,7 +36,7 @@ class _HomeState extends State<HomePage> {
             children: [
               TextButton(
                 child: Text(S.of(context).language),
-                onPressed: () => logic.changeLanguage(context),
+                onPressed: () => logic.changeLanguage(),
               ),
               TextButton(
                 child: Text(S.of(context).count),

@@ -37,11 +37,11 @@ class MainLogic extends GetxController {
     });
   }
 
-  changeLanguage(BuildContext context) {
-    Locale locale = Localizations.localeOf(context);
+  changeLanguage() {
+    var locale = Get.locale;
     for (var localeFile in S.delegate.supportedLocales) {
       print("语言切换${locale.toString()}--${localeFile.toString()}");
-      if (localeFile.languageCode != locale.languageCode) {
+      if (localeFile.languageCode != locale?.languageCode) {
         Get.updateLocale(localeFile);
         // MyAppState.appData.changeLocale(localeFile);
         return;
