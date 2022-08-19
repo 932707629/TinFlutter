@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
-import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/generated/l10n.dart';
+import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
@@ -25,41 +25,41 @@ class _HomeState extends State<HomePage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).home),
+        title: Text('home'.tr),
       ),
       body: Column(
         children: [
           Wrap(
-            spacing: Numbers.size_8,
-            runSpacing: Numbers.size_4,
+            spacing: Dimens.d_8,
+            runSpacing: Dimens.d_4,
             alignment: WrapAlignment.start,
             children: [
               TextButton(
-                child: Text(S.of(context).language),
+                child: Text('language'.tr),
                 onPressed: () => logic.changeLanguage(),
               ),
               TextButton(
-                child: Text(S.of(context).count),
+                child: Text('count'.tr),
                 onPressed: () => {
                   Get.toNamed(Routes.count,
-                      arguments: {"title": S.current.count}),
+                      arguments: {"title": 'count'.tr}),
                 },
               ),
               TextButton(
-                child: Text(S.of(context).storage),
+                child: Text('storage'.tr),
                 onPressed: () => {
                   Get.toNamed(Routes.storage),
                 },
               ),
               TextButton(
-                child: Text(S.of(context).theme),
+                child: Text('theme'.tr),
                 onPressed: () => {
                   Get.changeTheme(
                       Get.isDarkMode ? ThemeData.light() : ThemeData.dark()),
                 },
               ),
               TextButton(
-                child: Text(S.of(context).connect),
+                child: Text('connect'.tr),
                 onPressed: () => {
                   Get.toNamed(Routes.connect),
                 },
@@ -69,31 +69,31 @@ class _HomeState extends State<HomePage> {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {logic.checkPermission(context)}
                       },
-                  child: Text(S.of(context).permission)),
+                  child: Text('permission'.tr)),
               TextButton(
                   onPressed: () => {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {Get.toNamed(Routes.webview)}
                       },
-                  child: Text(S.of(context).webview)),
+                  child: Text('webview'.tr)),
               TextButton(
                 onPressed: () => {
                   AssetPicker.pickAssets(context)
                       .then((value) => {logger.i('文件选择的结果${value?.length}')})
                 },
-                child: Text(S.of(context).pictureSelector),
+                child: Text('pictureSelector'.tr),
               ),
               TextButton(
                 onPressed: () => {
                   Get.toNamed(Routes.rx_dart),
                 },
-                child: Text(S.of(context).rx_dart),
+                child: Text('rx_dart'.tr),
               ),
               TextButton(
-                child: Text(S.of(context).multiple),
+                child: Text('multiple'.tr),
                 onPressed: () => {
                   behaviorBus
-                      .fire(EventTaskBean(0, S.of(context).userEventBus)),
+                      .fire(EventTaskBean(0, 'userEventBus'.tr)),
                   Get.toNamed(Routes.multiplex),
                 },
               ),

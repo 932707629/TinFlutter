@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/generated/l10n.dart';
-
 import 'connect_logic.dart';
 import 'connect_state.dart';
 
@@ -19,7 +17,7 @@ class _ConnectPageState extends State<ConnectPage> {
     Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).connect),
+        title: Text('connect'.tr),
         automaticallyImplyLeading: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -34,13 +32,13 @@ class _ConnectPageState extends State<ConnectPage> {
             alignment: WrapAlignment.start,
             children: [
               TextButton(
-                child: Text(S.of(context).getx_get),
+                child: Text('getx_get'.tr),
                 onPressed: () => {
                   logic.createGet()
                 },
               ),
               TextButton(
-                child: Text(S.of(context).getx_post),
+                child: Text('getx_post'.tr),
                 onPressed: () => {
                   logic.createPost()
                 },
