@@ -1,5 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:tin_flutter/app/logger.dart';
 
 import 'global.dart';
 
@@ -10,7 +11,7 @@ class RouteObservers extends NavigatorObserver{
   void didPush(Route route, Route? previousRoute) {
     // TODO: implement didPush
     super.didPush(route, previousRoute);
-    logger.i("当前路由页: ${route.settings.name}");
+    logger("当前路由页: ${route.settings.name}");
   }
 
   @override

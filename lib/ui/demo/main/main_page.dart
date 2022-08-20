@@ -24,10 +24,10 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     _pageController = PageController();
 
-    SchedulerBinding.instance?.addPostFrameCallback((timeStamp) {
-      EasyRefresh.defaultHeader = MaterialHeader();
-      EasyRefresh.defaultFooter = MaterialFooter();
-    });
+    // SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+    //   EasyRefresh.defaultHeader = MaterialHeader();
+    //   EasyRefresh.defaultFooter = MaterialFooter();
+    // });
     // List<String> tabs = [S.current.home, S.current.activity, S.current.other];
     return Scaffold(
       body: PageView(

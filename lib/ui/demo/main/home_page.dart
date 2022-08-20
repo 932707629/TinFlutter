@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'package:tin_flutter/app/global.dart';
@@ -79,7 +80,7 @@ class _HomeState extends State<HomePage> {
               TextButton(
                 onPressed: () => {
                   AssetPicker.pickAssets(context)
-                      .then((value) => {logger.i('文件选择的结果${value?.length}')})
+                      .then((value) => {logger('文件选择的结果${value?.length}')})
                 },
                 child: Text('pictureSelector'.tr),
               ),

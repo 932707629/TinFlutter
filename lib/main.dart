@@ -4,12 +4,16 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/app/intl.dart';
+import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'app/app_data.dart';
 import 'app/route_observers.dart';
 
 void main() {
+  Logger.init(tag: 'TinFlutter',isDebug: isDebug);
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -29,7 +33,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       //填入设计稿中设备的屏幕尺寸,单位dp
         designSize: Size(375, 690),
-        builder: (e) => GetMaterialApp(
+        builder: (context,e) => GetMaterialApp(
           translations: Intl(),
           enableLog: true,
           initialRoute: Routes.main,

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Rx;
 import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/network/app_connect.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/widget/header_bar.dart';
@@ -33,7 +34,7 @@ class _RxDartPageState extends State<RxDartPage> {
               Stream.fromIterable(['1', '2', '3'])
                   .map((event) => event + '0')
                   .listen((event) {
-                logger.i('下游收到的$event');
+                logger('下游收到的$event');
               })
             },
             child: Text("Map"),
@@ -43,7 +44,7 @@ class _RxDartPageState extends State<RxDartPage> {
               Stream.fromIterable(['1', '2', '3'])
                   .expand((element) => [element,'4','5'])
                   .listen((event) {
-                logger.i('下游收到的$event');
+                logger('下游收到的$event');
               }),
             },
             child: Text("Expand"),
@@ -55,7 +56,7 @@ class _RxDartPageState extends State<RxDartPage> {
               ,Stream.fromIterable(['4', '5', '6'])
               ,Stream.fromIterable(['7', '8', '9'])
               ]).listen((event) {
-                logger.i('下游收到的$event');
+                logger('下游收到的$event');
               }),
             },
             child: Text("Merge"),
