@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -36,27 +37,29 @@ class MyApp extends StatelessWidget {
     var locales = S.delegate.supportedLocales;
     return ScreenUtilInit(
       //填入设计稿中设备的屏幕尺寸,单位dp
-        designSize: Size(360, 690),
-        builder: (e) => GetMaterialApp(
+        designSize: Size(360, 640),
+        builder: (context,e) => GetMaterialApp(
           enableLog: true,
           initialRoute: Routes.main,
           getPages: Routes.getPages,
           navigatorObservers: [RouteObservers()],
           locale: locales[1],
           supportedLocales: locales,
+          fallbackLocale: locales[1], ///添加一个默认语言选项，以备上面指定的语言翻译 不存在
           localizationsDelegates: [
             S.delegate,
             GlobalMaterialLocalizations.delegate, /// 指定本地化的字符串和一些其他的值
             GlobalCupertinoLocalizations.delegate, /// 对应的Cupertino风格
             GlobalWidgetsLocalizations.delegate, /// 指定默认的文本排列方向, 由左到右或由右到左
           ],
-          fallbackLocale: locales[1], ///添加一个默认语言选项，以备上面指定的语言翻译 不存在
-          builder: (context,widget){
-            return MediaQuery(///设置文字大小不随系统设置改变
-                data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-                child: widget==null ?Container() : widget
-            );
-          },
+          builder: EasyLoading.init(
+            builder: (context,widget){
+              return MediaQuery(///设置文字大小不随系统设置改变
+                  data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                  child: widget==null ? Container() : widget
+              );
+            },
+          ),
         )
     );
   }

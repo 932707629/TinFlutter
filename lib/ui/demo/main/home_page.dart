@@ -20,6 +20,7 @@ class _HomeState extends State<HomePage> {
   final logic = Get.find<MainLogic>();
   final MainState state = Get.find<MainLogic>().state;
 
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -92,9 +93,14 @@ class _HomeState extends State<HomePage> {
               TextButton(
                 child: Text(S.of(context).multiple),
                 onPressed: () => {
-                  behaviorBus
-                      .fire(EventTaskBean(0, S.of(context).userEventBus)),
+                  behaviorBus.fire(EventTaskBean(0, S.of(context).userEventBus)),
                   Get.toNamed(Routes.multiplex),
+                },
+              ),
+              TextButton(
+                child: Text(S.of(context).loading),
+                onPressed: () => {
+                  Get.toNamed(Routes.loading),
                 },
               ),
             ],

@@ -13,6 +13,7 @@ void showToast(String message){
   Fluttertoast.showToast(msg: message,gravity: ToastGravity.CENTER);
 }
 
+
 ///log日志打印
 var logger=Logger(
   printer: PrettyPrinter(

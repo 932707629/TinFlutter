@@ -36,6 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "add_moderator": MessageLookupByLibrary.simpleMessage("add moderator"),
         "add_shopping_cart":
             MessageLookupByLibrary.simpleMessage("add shopping cart"),
+        "alert_error": MessageLookupByLibrary.simpleMessage("Alert Error"),
+        "alert_info": MessageLookupByLibrary.simpleMessage("Alert Info"),
+        "alert_success": MessageLookupByLibrary.simpleMessage("Alert Success"),
         "app_name": MessageLookupByLibrary.simpleMessage("Flutter Demo"),
         "connect": MessageLookupByLibrary.simpleMessage("Connect"),
         "count": MessageLookupByLibrary.simpleMessage("GetX Count"),
@@ -46,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "greet": MessageLookupByLibrary.simpleMessage("hello~"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "loading": MessageLookupByLibrary.simpleMessage("loading"),
         "multiple": MessageLookupByLibrary.simpleMessage("Multiple layout"),
         "other": MessageLookupByLibrary.simpleMessage("other"),
         "permission": MessageLookupByLibrary.simpleMessage("Permission"),
@@ -54,10 +58,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "pick_time": MessageLookupByLibrary.simpleMessage("Pick a time"),
         "pictureSelector":
             MessageLookupByLibrary.simpleMessage("Picture Selector"),
+        "progress": MessageLookupByLibrary.simpleMessage("Progress"),
         "rx_dart": MessageLookupByLibrary.simpleMessage("RxDart"),
         "sayHello": m0,
         "storage": MessageLookupByLibrary.simpleMessage("Storage"),
         "theme": MessageLookupByLibrary.simpleMessage("Theme"),
+        "toast": MessageLookupByLibrary.simpleMessage("Toast"),
         "userEventBus":
             MessageLookupByLibrary.simpleMessage("Welcome to EventBus"),
         "webview": MessageLookupByLibrary.simpleMessage("WebView")

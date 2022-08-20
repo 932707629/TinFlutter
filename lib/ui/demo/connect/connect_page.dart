@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/index.dart';
 import 'package:tin_flutter/generated/l10n.dart';
 
 import 'connect_logic.dart';
@@ -28,10 +29,8 @@ class _ConnectPageState extends State<ConnectPage> {
       ),
       body: Column(
         children: [
-          Wrap(
-            spacing: 8,
-            runSpacing: 4,
-            alignment: WrapAlignment.start,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
                 child: Text(S.of(context).getx_get),

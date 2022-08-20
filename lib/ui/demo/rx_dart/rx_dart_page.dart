@@ -17,6 +17,7 @@ class RxDartPage extends StatefulWidget {
 class _RxDartPageState extends State<RxDartPage> {
   final logic = Get.find<RxDartLogic>();
   final RxDartState state = Get.find<RxDartLogic>().state;
+  CompositeSubscription subscription=CompositeSubscription();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,7 @@ class _RxDartPageState extends State<RxDartPage> {
                   .map((event) => event + '0')
                   .listen((event) {
                 logger.i('下游收到的$event');
-              })
+              }).addTo(subscription)
             },
             child: Text("Map"),
           ),
@@ -44,7 +45,7 @@ class _RxDartPageState extends State<RxDartPage> {
                   .expand((element) => [element,'4','5'])
                   .listen((event) {
                 logger.i('下游收到的$event');
-              }),
+              }).addTo(subscription),
             },
             child: Text("Expand"),
           ),
@@ -56,9 +57,49 @@ class _RxDartPageState extends State<RxDartPage> {
               ,Stream.fromIterable(['7', '8', '9'])
               ]).listen((event) {
                 logger.i('下游收到的$event');
-              }),
+              }).addTo(subscription),
             },
             child: Text("Merge"),
+          ),
+          TextButton(
+            onPressed: () => {
+              Rx.concat([
+                Stream.fromIterable(['1', '2', '3'])
+                ,Stream.fromIterable(['4', '5', '6'])
+                ,Stream.fromIterable(['7', '8', '9'])
+              ]).listen((event) {
+                logger.i('下游收到的$event');
+              }).addTo(subscription),
+            },
+            child: Text("Concat"),
+          ),
+          TextButton(
+            onPressed: () => {
+              Stream.fromIterable(['1','2','3'])
+              .every((element) => element == '4')
+              .asStream().listen((event) {
+                logger.i('下游收到的$event');
+              }).addTo(subscription)
+            },
+            child: Text("Every"),
+          ),
+          TextButton(
+            onPressed: () => {
+              Rx.timer('hi', Duration(seconds: 10))
+              .listen((event) {
+                logger.i('下游收到的$event');
+              }).addTo(subscription)
+            },
+            child: Text("Timer"),
+          ),
+          TextButton(
+            onPressed: () => {
+              Stream.periodic(Duration(seconds: 1))
+                  .listen((event) {
+                logger.i('下游收到的$event');
+              }).addTo(subscription)
+            },
+            child: Text("Periodic"),
           ),
         ],
       ),
@@ -69,6 +110,10 @@ class _RxDartPageState extends State<RxDartPage> {
   void dispose() {
     Get.delete<RxDartLogic>();
     Get.delete<AppConnect>();
+    subscription.dispose();
     super.dispose();
   }
+
+
+
 }

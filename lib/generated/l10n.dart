@@ -230,6 +230,66 @@ class S {
     );
   }
 
+  /// `loading`
+  String get loading {
+    return Intl.message(
+      'loading',
+      name: 'loading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Progress`
+  String get progress {
+    return Intl.message(
+      'Progress',
+      name: 'progress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Toast`
+  String get toast {
+    return Intl.message(
+      'Toast',
+      name: 'toast',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alert Success`
+  String get alert_success {
+    return Intl.message(
+      'Alert Success',
+      name: 'alert_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alert Info`
+  String get alert_info {
+    return Intl.message(
+      'Alert Info',
+      name: 'alert_info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alert Error`
+  String get alert_error {
+    return Intl.message(
+      'Alert Error',
+      name: 'alert_error',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Pick a time`
   String get pick_time {
     return Intl.message(
