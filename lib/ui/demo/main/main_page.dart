@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 import 'dynamic_page.dart';
 import 'home_page.dart';
 import 'mine_page.dart';
@@ -40,12 +41,12 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: Obx( ()=>
           BottomNavigationBar(
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'.tr),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: Tr().home),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.dynamic_form), label: 'activity'.tr
+                  icon: Icon(Icons.dynamic_form), label: Tr().activity
               ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.supervisor_account), label: 'other'.tr
+                  icon: Icon(Icons.supervisor_account), label: Tr().other
               ),
             ],
             currentIndex: state.selectedIndex.value,

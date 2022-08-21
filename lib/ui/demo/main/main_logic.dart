@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl.dart';
+import 'package:tin_flutter/app/intl/intl.dart';
 import 'main_state.dart';
 
 class MainLogic extends GetxController {
@@ -39,6 +39,11 @@ class MainLogic extends GetxController {
 
   changeLanguage() {
     var locale = Get.locale;
+    if(locale?.languageCode == 'cn'){
+      Get.updateLocale(Locale('en','EN'));
+    } else {
+      Get.updateLocale(Locale('cn','ZH'));
+    }
     // for (var localeFile in S.delegate.supportedLocales) {
     //   print("语言切换${locale.toString()}--${localeFile.toString()}");
     //   if (localeFile.languageCode != locale?.languageCode) {

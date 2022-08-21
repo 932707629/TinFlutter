@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'count_logic.dart';
@@ -19,7 +20,7 @@ class _CountPageState extends State<CountPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('count'.tr),
+        title: Text(Tr().count),
         automaticallyImplyLeading: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'web_logic.dart';
@@ -19,7 +20,7 @@ class _WebPageState extends State<WebPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('webview'.tr),
+          title: Text(Tr().webview),
           automaticallyImplyLeading: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),

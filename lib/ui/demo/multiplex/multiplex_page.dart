@@ -4,6 +4,7 @@ import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'multiplex_logic.dart';
 import 'multiplex_state.dart';
@@ -47,7 +48,7 @@ class _MultiplexPageState extends State<MultiplexPage>
                     delegate: SliverChildBuilderDelegate((context, index) {
                       return GestureDetector(
                         onTap: () {
-                          showToast('sayHello'.tr);
+                          showToast(Tr().sayHello);
                         },
                         child: Card(
                           child: new Container(
@@ -103,7 +104,7 @@ class _MultiplexPageState extends State<MultiplexPage>
       widgets.add(
         Container(
           color: element,
-          margin: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+          margin: EdgeInsets.symmetric(horizontal: Dimens.d_15.r, vertical: Dimens.d_10.r),
         ),
       );
     });
@@ -113,14 +114,14 @@ class _MultiplexPageState extends State<MultiplexPage>
   ///构建横纵列表
   Widget buildGradView(BuildContext context) {
     List<ActionItem> items=[
-      ActionItem(Icons.ac_unit, 'ac_unit'.tr),
-      ActionItem(Icons.access_alarm, 'access_alarm'.tr),
-      ActionItem(Icons.accessibility, 'accessibility'.tr),
-      ActionItem(Icons.account_balance, 'account_balance'.tr),
-      ActionItem(Icons.account_balance_wallet, 'account_balance_wallet'.tr),
-      ActionItem(Icons.add_a_photo, 'add_a_photo'.tr),
-      ActionItem(Icons.add_moderator, 'add_moderator'.tr),
-      ActionItem(Icons.add_shopping_cart, 'add_shopping_cart'.tr),
+      ActionItem(Icons.ac_unit, Tr().ac_unit),
+      ActionItem(Icons.access_alarm, Tr().access_alarm),
+      ActionItem(Icons.accessibility, Tr().accessibility),
+      ActionItem(Icons.account_balance, Tr().account_balance),
+      ActionItem(Icons.account_balance_wallet, Tr().account_balance_wallet),
+      ActionItem(Icons.add_a_photo, Tr().add_a_photo),
+      ActionItem(Icons.add_moderator, Tr().add_moderator),
+      ActionItem(Icons.add_shopping_cart, Tr().add_shopping_cart),
     ];
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -131,7 +132,7 @@ class _MultiplexPageState extends State<MultiplexPage>
         var action = items[index];
         return GestureDetector(
           onTap: () {
-            showToast("sayHello".tr);
+            showToast(Tr().sayHello);
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
@@ -26,7 +27,7 @@ class _HomeState extends State<HomePage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('home'.tr),
+        title: Text(Tr().home),
       ),
       body: Column(
         children: [
@@ -36,31 +37,31 @@ class _HomeState extends State<HomePage> {
             alignment: WrapAlignment.start,
             children: [
               TextButton(
-                child: Text('language'.tr),
+                child: Text(Tr().language),
                 onPressed: () => logic.changeLanguage(),
               ),
               TextButton(
-                child: Text('count'.tr),
+                child: Text(Tr().count),
                 onPressed: () => {
                   Get.toNamed(Routes.count,
-                      arguments: {"title": 'count'.tr}),
+                      arguments: {"title": Tr().count}),
                 },
               ),
               TextButton(
-                child: Text('storage'.tr),
+                child: Text(Tr().storage),
                 onPressed: () => {
                   Get.toNamed(Routes.storage),
                 },
               ),
               TextButton(
-                child: Text('theme'.tr),
+                child: Text(Tr().theme),
                 onPressed: () => {
                   Get.changeTheme(
                       Get.isDarkMode ? ThemeData.light() : ThemeData.dark()),
                 },
               ),
               TextButton(
-                child: Text('connect'.tr),
+                child: Text(Tr().connect),
                 onPressed: () => {
                   Get.toNamed(Routes.connect),
                 },
@@ -70,31 +71,31 @@ class _HomeState extends State<HomePage> {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {logic.checkPermission(context)}
                       },
-                  child: Text('permission'.tr)),
+                  child: Text(Tr().permission)),
               TextButton(
                   onPressed: () => {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {Get.toNamed(Routes.webview)}
                       },
-                  child: Text('webview'.tr)),
+                  child: Text(Tr().webview)),
               TextButton(
                 onPressed: () => {
                   AssetPicker.pickAssets(context)
                       .then((value) => {logger('文件选择的结果${value?.length}')})
                 },
-                child: Text('pictureSelector'.tr),
+                child: Text(Tr().pictureSelector),
               ),
               TextButton(
                 onPressed: () => {
                   Get.toNamed(Routes.rx_dart),
                 },
-                child: Text('rx_dart'.tr),
+                child: Text(Tr().rx_dart),
               ),
               TextButton(
-                child: Text('multiple'.tr),
+                child: Text(Tr().multiple),
                 onPressed: () => {
                   behaviorBus
-                      .fire(EventTaskBean(0, 'userEventBus'.tr)),
+                      .fire(EventTaskBean(0, Tr().userEventBus)),
                   Get.toNamed(Routes.multiplex),
                 },
               ),

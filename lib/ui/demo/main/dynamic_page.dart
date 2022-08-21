@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'main_logic.dart';
@@ -24,7 +25,7 @@ class _DynamicState extends State<DynamicPage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('activity'.tr),
+        title: Text(Tr().activity),
       ),
       body: Obx( ()=> ListView.builder(
           padding: EdgeInsets.all(Dimens.d_8.r),

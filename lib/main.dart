@@ -5,7 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl.dart';
+import 'package:tin_flutter/app/intl/intl.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'app/app_data.dart';

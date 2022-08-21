@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Rx;
 import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/network/app_connect.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
@@ -23,7 +24,7 @@ class _RxDartPageState extends State<RxDartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HeaderBar(
-        'rx_dart'.tr,
+        Tr().rx_dart,
         backgroundColor: Colors.amberAccent,
       ),
       body: Wrap(

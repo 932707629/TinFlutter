@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/res/dimens.dart';
 import 'connect_logic.dart';
 import 'connect_state.dart';
 
@@ -17,7 +19,7 @@ class _ConnectPageState extends State<ConnectPage> {
     Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('connect'.tr),
+        title: Text(Tr().connect),
         automaticallyImplyLeading: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -26,19 +28,16 @@ class _ConnectPageState extends State<ConnectPage> {
       ),
       body: Column(
         children: [
-          Wrap(
-            spacing: 8,
-            runSpacing: 4,
-            alignment: WrapAlignment.start,
+          Row(
             children: [
               TextButton(
-                child: Text('getx_get'.tr),
+                child: Text(Tr().getx_get),
                 onPressed: () => {
                   logic.createGet()
                 },
               ),
               TextButton(
-                child: Text('getx_post'.tr),
+                child: Text(Tr().getx_post),
                 onPressed: () => {
                   logic.createPost()
                 },
