@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       //填入设计稿中设备的屏幕尺寸,单位dp
         designSize: Size(375, 690),
-        builder: (context,e) => GetMaterialApp(
+        builder: (context,child) => GetMaterialApp(
           translations: Intl(),
           enableLog: true,
           initialRoute: Routes.main,

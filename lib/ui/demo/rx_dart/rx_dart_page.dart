@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Rx;
-import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/intl/intl.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/network/app_connect.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
@@ -24,7 +23,7 @@ class _RxDartPageState extends State<RxDartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HeaderBar(
-        Tr().rx_dart,
+        Intl().rx_dart,
         backgroundColor: Colors.amberAccent,
       ),
       body: Wrap(
@@ -38,7 +37,7 @@ class _RxDartPageState extends State<RxDartPage> {
                 logger('下游收到的$event');
               })
             },
-            child: Text("Map"),
+            child: Text(Intl().rx_map),
           ),
           TextButton(
             onPressed: () => {
@@ -48,7 +47,7 @@ class _RxDartPageState extends State<RxDartPage> {
                 logger('下游收到的$event');
               }),
             },
-            child: Text("Expand"),
+            child: Text(Intl().rx_expand),
           ),
           TextButton(
             onPressed: () => {
@@ -60,7 +59,7 @@ class _RxDartPageState extends State<RxDartPage> {
                 logger('下游收到的$event');
               }),
             },
-            child: Text("Merge"),
+            child: Text(Intl().rx_merge),
           ),
         ],
       ),

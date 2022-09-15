@@ -8,7 +8,6 @@ class MainState {
   }
 
 
-  var count = Dimens.i_40.obs;
   var selectedIndex = 0.obs;
 
 

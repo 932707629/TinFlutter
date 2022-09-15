@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/intl/intl.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
+import 'package:tin_flutter/ui/demo/home/home_logic.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
-
-import 'main_logic.dart';
-import 'main_state.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -19,15 +17,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
-  final logic = Get.find<MainLogic>();
-  final MainState state = Get.find<MainLogic>().state;
+  final logic = Get.find<HomeLogic>();
+  final state = Get.find<HomeLogic>().state;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(Tr().home),
+        title: Text(Intl().home),
       ),
       body: Column(
         children: [
@@ -37,31 +35,31 @@ class _HomeState extends State<HomePage> {
             alignment: WrapAlignment.start,
             children: [
               TextButton(
-                child: Text(Tr().language),
+                child: Text(Intl().language),
                 onPressed: () => logic.changeLanguage(),
               ),
               TextButton(
-                child: Text(Tr().count),
+                child: Text(Intl().count),
                 onPressed: () => {
                   Get.toNamed(Routes.count,
-                      arguments: {"title": Tr().count}),
+                      arguments: {"title": Intl().count}),
                 },
               ),
               TextButton(
-                child: Text(Tr().storage),
+                child: Text(Intl().storage),
                 onPressed: () => {
                   Get.toNamed(Routes.storage),
                 },
               ),
               TextButton(
-                child: Text(Tr().theme),
+                child: Text(Intl().theme),
                 onPressed: () => {
                   Get.changeTheme(
                       Get.isDarkMode ? ThemeData.light() : ThemeData.dark()),
                 },
               ),
               TextButton(
-                child: Text(Tr().connect),
+                child: Text(Intl().connect),
                 onPressed: () => {
                   Get.toNamed(Routes.connect),
                 },
@@ -71,31 +69,31 @@ class _HomeState extends State<HomePage> {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {logic.checkPermission(context)}
                       },
-                  child: Text(Tr().permission)),
+                  child: Text(Intl().permission)),
               TextButton(
                   onPressed: () => {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {Get.toNamed(Routes.webview)}
                       },
-                  child: Text(Tr().webview)),
+                  child: Text(Intl().webview)),
               TextButton(
                 onPressed: () => {
                   AssetPicker.pickAssets(context)
                       .then((value) => {logger('文件选择的结果${value?.length}')})
                 },
-                child: Text(Tr().pictureSelector),
+                child: Text(Intl().pictureSelector),
               ),
               TextButton(
                 onPressed: () => {
                   Get.toNamed(Routes.rx_dart),
                 },
-                child: Text(Tr().rx_dart),
+                child: Text(Intl().rx_dart),
               ),
               TextButton(
-                child: Text(Tr().multiple),
+                child: Text(Intl().multiple),
                 onPressed: () => {
                   behaviorBus
-                      .fire(EventTaskBean(0, Tr().userEventBus)),
+                      .fire(EventTaskBean(0, Intl().userEventBus)),
                   Get.toNamed(Routes.multiplex),
                 },
               ),

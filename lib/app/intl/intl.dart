@@ -4,6 +4,56 @@ import 'package:get/get.dart';
 
 class Intl extends Translations{
 
+  Intl._internal();
+
+  static Intl? instance;
+
+  static getInstance() {
+    if (instance == null) {
+      instance = Intl._internal();
+    }
+    return instance;
+  }
+
+  factory Intl() => getInstance();
+
+
+  String get connect => 'connect'.tr;
+  String get getx_get => 'getx_get'.tr;
+  String get getx_post => 'getx_post'.tr;
+  String get count => 'count'.tr;
+  String get home => 'home'.tr;
+  String get activity => 'activity'.tr;
+  String get other => 'other'.tr;
+  String get sayHello => 'sayHello'.tr;
+  String get multiple => 'multiple'.tr;
+  String get app_name => 'app_name'.tr;
+  String get greet => 'greet'.tr;
+  String get language => 'language'.tr;
+  String get storage => 'storage'.tr;
+  String get dio_get => 'dio_get'.tr;
+  String get dio_post => 'dio_post'.tr;
+  String get permission => 'permission'.tr;
+  String get webview => 'webview'.tr;
+  String get pictureSelector => 'pictureSelector'.tr;
+  String get rx_dart => 'rx_dart'.tr;
+  String get pick_time => 'pick_time'.tr;
+  String get userEventBus => 'userEventBus'.tr;
+  String get permissionDenied => 'permissionDenied'.tr;
+  String get ac_unit => 'ac_unit'.tr;
+  String get access_alarm => 'access_alarm'.tr;
+  String get accessibility => 'accessibility'.tr;
+  String get account_balance => 'account_balance'.tr;
+  String get account_balance_wallet => 'account_balance_wallet'.tr;
+  String get add_a_photo => 'add_a_photo'.tr;
+  String get add_moderator => 'add_moderator'.tr;
+  String get add_shopping_cart => 'add_shopping_cart'.tr;
+  String get rx_map => 'rx_map'.tr;
+  String get rx_expand => 'rx_expand'.tr;
+  String get rx_merge => 'rx_merge'.tr;
+  String get theme => 'theme'.tr;
+
+
   @override
   Map<String, Map<String, String>> get keys => {
     'en_US': {
@@ -37,7 +87,10 @@ class Intl extends Translations{
       "account_balance_wallet": "account balance wallet",
       "add_a_photo": "add a photo",
       "add_moderator": "add moderator",
-      "add_shopping_cart": "add shopping cart"
+      "add_shopping_cart": "add shopping cart",
+      "rx_map":"Map",
+      "rx_expand":"Expand",
+      "rx_merge":"Merge",
     },
     'cn_ZH': {
       "app_name": "Flutter示例",
@@ -70,7 +123,10 @@ class Intl extends Translations{
       "account_balance_wallet": "钱包",
       "add_a_photo": "摄影",
       "add_moderator": "安全",
-      "add_shopping_cart": "购物"
+      "add_shopping_cart": "购物",
+      "rx_map":"了解信息",
+      "rx_expand":"扩展",
+      "rx_merge":"合并",
     }
   };
 
