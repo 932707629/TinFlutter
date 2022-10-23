@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown
     ]);
 
-    // var locales = S.delegate.supportedLocales;
+    var locales = [Locale('zh','ZH'),Locale('en','EN')];
     return ScreenUtilInit(
       //填入设计稿中设备的屏幕尺寸,单位dp
         designSize: Size(375, 690),
@@ -39,9 +39,9 @@ class MyApp extends StatelessWidget {
           initialRoute: Routes.main,
           getPages: Routes.getPages,
           navigatorObservers: [RouteObservers()],
-          locale: Locale('cn','ZH'),
-          fallbackLocale: Locale('en','EN'), ///添加一个默认语言选项，以备上面指定的语言翻译 不存在
-          // supportedLocales: locales,
+          locale: locales[0],
+          fallbackLocale: locales[0], ///添加一个默认语言选项，以备上面指定的语言翻译 不存在
+          supportedLocales: locales,
           localizationsDelegates: [
             // S.delegate,
             GlobalMaterialLocalizations.delegate, /// 指定本地化的字符串和一些其他的值
