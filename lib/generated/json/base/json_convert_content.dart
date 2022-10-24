@@ -11,7 +11,7 @@ typedef JsonConvertFunction<T> = T Function(Map<String, dynamic> json);
 
 class JsonConvert {
 	static final Map<String, JsonConvertFunction> _convertFuncMap = {
-		(ChapterInfoEntity).toString(): (json) => ChapterInfoEntity.fromJson(json),
+		(ChapterInfoEntity).toString(): ChapterInfoEntity.fromJson,
 	};
 
   T? convert<T>(dynamic value) {
@@ -46,6 +46,9 @@ class JsonConvert {
   }
 
   T? asT<T extends Object?>(dynamic value) {
+    if(value == null){
+      return null;
+    }
     if (value is T) {
       return value;
     }

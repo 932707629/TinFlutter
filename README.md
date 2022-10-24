@@ -7,7 +7,6 @@
 
 ### 需要安装的Plugin: 
 - 基本配置插件: Dart、Kotlin、Flutter
-- Flutter Intl 国际化插件，用于生成国际化相关代码
 - Json to Dart 对象bean生成插件
 - GetX GetX框架插件，用于生成GetX框架相关类和代码
 
@@ -58,6 +57,7 @@
 ### 问题
 
 - flutter for web中的跨域问题[flutter for web跨域解决方案](https://www.cnblogs.com/lcosima/p/14504254.html)
+- Flutter Intl 国际化插件，用于生成国际化相关代码
 
 
 
