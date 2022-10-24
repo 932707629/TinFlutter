@@ -17,6 +17,8 @@ class _ConnectPageState extends State<ConnectPage> {
 
   @override
     Widget build(BuildContext context) {
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text(Tr().connect),
