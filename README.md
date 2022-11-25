@@ -7,7 +7,7 @@
 
 ### 需要安装的Plugin: 
 - 基本配置插件: Dart、Kotlin、Flutter
-- Json to Dart 对象bean生成插件
+- FlutterJsonBeanFactory 对象bean生成插件
 - GetX GetX框架插件，用于生成GetX框架相关类和代码
 
 2021-05-02
