@@ -1,11 +1,9 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:tin_flutter/app/app_data.dart';
-import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/generated/l10n.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/res/dimens.dart';
 import 'storage_logic.dart';
 import 'storage_state.dart';
 
@@ -22,7 +20,7 @@ class _StoragePageState extends State<StoragePage> {
     Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).storage),
+        title: Text(Tr().sayHello),
         automaticallyImplyLeading: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -33,7 +31,7 @@ class _StoragePageState extends State<StoragePage> {
         child: Obx(
               () => Text(
                   '${state.localIndex.value}',
-                  style: TextStyle(fontSize: Numbers.size_30.sp)
+                  style: TextStyle(fontSize: Dimens.d_30.sp)
               ),
         ),
       ),

@@ -2,8 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/generated/l10n.dart';
+import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/intl/intl.dart';
 import 'main_state.dart';
 
 class MainLogic extends GetxController {
@@ -31,7 +31,7 @@ class MainLogic extends GetxController {
     ].request();
     statuses.forEach((key, value) {
       if(value.isDenied){///被拒绝了
-        showToast(S.of(context).permissionDenied);
+        showToast('permissionDenied'.tr);
         return;
       }
     });
@@ -39,14 +39,19 @@ class MainLogic extends GetxController {
 
   changeLanguage() {
     var locale = Get.locale;
-    for (var localeFile in S.delegate.supportedLocales) {
-      print("语言切换${locale.toString()}--${localeFile.toString()}");
-      if (localeFile.languageCode != locale?.languageCode) {
-        Get.updateLocale(localeFile);
-        // MyAppState.appData.changeLocale(localeFile);
-        return;
-      }
+    if(locale?.languageCode == 'cn'){
+      Get.updateLocale(Locale('en','EN'));
+    } else {
+      Get.updateLocale(Locale('cn','ZH'));
     }
+    // for (var localeFile in S.delegate.supportedLocales) {
+    //   print("语言切换${locale.toString()}--${localeFile.toString()}");
+    //   if (localeFile.languageCode != locale?.languageCode) {
+    //     Get.updateLocale(localeFile);
+    //     // MyAppState.appData.changeLocale(localeFile);
+    //     return;
+    //   }
+    // }
   }
 
 }

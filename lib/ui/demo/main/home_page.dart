@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/logger.dart';
+import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
-import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/generated/l10n.dart';
+import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
@@ -20,47 +22,46 @@ class _HomeState extends State<HomePage> {
   final logic = Get.find<MainLogic>();
   final MainState state = Get.find<MainLogic>().state;
 
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).home),
+        title: Text(Tr().home),
       ),
       body: Column(
         children: [
           Wrap(
-            spacing: Numbers.size_8,
-            runSpacing: Numbers.size_4,
+            spacing: Dimens.d_8,
+            runSpacing: Dimens.d_4,
             alignment: WrapAlignment.start,
             children: [
               TextButton(
-                child: Text(S.of(context).language),
+                child: Text(Tr().language),
                 onPressed: () => logic.changeLanguage(),
               ),
               TextButton(
-                child: Text(S.of(context).count),
+                child: Text(Tr().count),
                 onPressed: () => {
                   Get.toNamed(Routes.count,
-                      arguments: {"title": S.current.count}),
+                      arguments: {"title": Tr().count}),
                 },
               ),
               TextButton(
-                child: Text(S.of(context).storage),
+                child: Text(Tr().storage),
                 onPressed: () => {
                   Get.toNamed(Routes.storage),
                 },
               ),
               TextButton(
-                child: Text(S.of(context).theme),
+                child: Text(Tr().theme),
                 onPressed: () => {
                   Get.changeTheme(
                       Get.isDarkMode ? ThemeData.light() : ThemeData.dark()),
                 },
               ),
               TextButton(
-                child: Text(S.of(context).connect),
+                child: Text(Tr().connect),
                 onPressed: () => {
                   Get.toNamed(Routes.connect),
                 },
@@ -70,37 +71,32 @@ class _HomeState extends State<HomePage> {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {logic.checkPermission(context)}
                       },
-                  child: Text(S.of(context).permission)),
+                  child: Text(Tr().permission)),
               TextButton(
                   onPressed: () => {
                         if (GetPlatform.isAndroid || GetPlatform.isIOS)
                           {Get.toNamed(Routes.webview)}
                       },
-                  child: Text(S.of(context).webview)),
+                  child: Text(Tr().webview)),
               TextButton(
                 onPressed: () => {
                   AssetPicker.pickAssets(context)
-                      .then((value) => {logger.i('文件选择的结果${value?.length}')})
+                      .then((value) => {logger('文件选择的结果${value?.length}')})
                 },
-                child: Text(S.of(context).pictureSelector),
+                child: Text(Tr().pictureSelector),
               ),
               TextButton(
                 onPressed: () => {
                   Get.toNamed(Routes.rx_dart),
                 },
-                child: Text(S.of(context).rx_dart),
+                child: Text(Tr().rx_dart),
               ),
               TextButton(
-                child: Text(S.of(context).multiple),
+                child: Text(Tr().multiple),
                 onPressed: () => {
-                  behaviorBus.fire(EventTaskBean(0, S.of(context).userEventBus)),
+                  behaviorBus
+                      .fire(EventTaskBean(0, Tr().userEventBus)),
                   Get.toNamed(Routes.multiplex),
-                },
-              ),
-              TextButton(
-                child: Text(S.of(context).loading),
-                onPressed: () => {
-                  Get.toNamed(Routes.loading),
                 },
               ),
             ],

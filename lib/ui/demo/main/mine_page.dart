@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/generated/l10n.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
 
 import 'main_logic.dart';
 import 'main_state.dart';
@@ -23,10 +23,10 @@ class _MineState extends State<MinePage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).other),
+        title: Text(Tr().other),
       ),
       body: Center(
-        child: Text(S.of(context).other),
+        child: Text(Tr().other),
       ),
     );
   }

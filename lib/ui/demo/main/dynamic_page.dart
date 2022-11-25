@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/generated/l10n.dart';
+import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'main_logic.dart';
 import 'main_state.dart';
@@ -24,14 +25,14 @@ class _DynamicState extends State<DynamicPage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).activity),
+        title: Text(Tr().activity),
       ),
       body: Obx( ()=> ListView.builder(
-          padding: EdgeInsets.all(Numbers.size_8.r),
+          padding: EdgeInsets.all(Dimens.d_8.r),
           itemCount: state.count.value,
           itemBuilder:(BuildContext context, int index) {
             return Container(
-              height: Numbers.size_50.h,
+              height: Dimens.d_30.h,
               color: Colors.amber[colorCodes[index%10]],
               child: Center(child: Text('Entry ${entries[index%10]}')),
             );
