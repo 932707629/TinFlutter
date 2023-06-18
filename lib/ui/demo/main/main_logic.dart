@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
+
 import 'main_state.dart';
 
 class MainLogic extends GetxController {
@@ -28,10 +28,12 @@ class MainLogic extends GetxController {
     Map<Permission, PermissionStatus> statuses = await [
       Permission.phone,
       Permission.storage,
+      Permission.mediaLibrary,
+      Permission.photos,
     ].request();
     statuses.forEach((key, value) {
       if(value.isDenied){///被拒绝了
-        showToast('permissionDenied'.tr);
+        showToast('permissionDenied'.tr + "=" + value.toString());
         return;
       }
     });

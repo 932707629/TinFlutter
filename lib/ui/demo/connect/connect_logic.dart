@@ -1,11 +1,11 @@
 
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/error_response_handler.dart';
-import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/network/app_connect.dart';
 import 'package:tin_flutter/ui/bean/base_response_entity.dart';
 import 'package:tin_flutter/ui/bean/chapter_info_entity.dart';
+
 import 'connect_state.dart';
 
 class ConnectLogic extends GetxController {

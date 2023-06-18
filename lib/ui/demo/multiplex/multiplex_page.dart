@@ -1,11 +1,13 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/intl/intr.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
+
 import 'multiplex_logic.dart';
 import 'multiplex_state.dart';
 
@@ -48,7 +50,7 @@ class _MultiplexPageState extends State<MultiplexPage>
                     delegate: SliverChildBuilderDelegate((context, index) {
                       return GestureDetector(
                         onTap: () {
-                          showToast(Tr().sayHello);
+                          showToast(Intr().sayHello);
                         },
                         child: Card(
                           child: new Container(
@@ -114,14 +116,14 @@ class _MultiplexPageState extends State<MultiplexPage>
   ///构建横纵列表
   Widget buildGradView(BuildContext context) {
     List<ActionItem> items=[
-      ActionItem(Icons.ac_unit, Tr().ac_unit),
-      ActionItem(Icons.access_alarm, Tr().access_alarm),
-      ActionItem(Icons.accessibility, Tr().accessibility),
-      ActionItem(Icons.account_balance, Tr().account_balance),
-      ActionItem(Icons.account_balance_wallet, Tr().account_balance_wallet),
-      ActionItem(Icons.add_a_photo, Tr().add_a_photo),
-      ActionItem(Icons.add_moderator, Tr().add_moderator),
-      ActionItem(Icons.add_shopping_cart, Tr().add_shopping_cart),
+      ActionItem(Icons.ac_unit, Intr().ac_unit),
+      ActionItem(Icons.access_alarm, Intr().access_alarm),
+      ActionItem(Icons.accessibility, Intr().accessibility),
+      ActionItem(Icons.account_balance, Intr().account_balance),
+      ActionItem(Icons.account_balance_wallet, Intr().account_balance_wallet),
+      ActionItem(Icons.add_a_photo, Intr().add_a_photo),
+      ActionItem(Icons.add_moderator, Intr().add_moderator),
+      ActionItem(Icons.add_shopping_cart, Intr().add_shopping_cart),
     ];
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -132,7 +134,7 @@ class _MultiplexPageState extends State<MultiplexPage>
         var action = items[index];
         return GestureDetector(
           onTap: () {
-            showToast(Tr().sayHello);
+            showToast(Intr().sayHello);
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

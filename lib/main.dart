@@ -5,7 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
+import 'package:tin_flutter/app/intl/intr.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'app/app_data.dart';
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       //填入设计稿中设备的屏幕尺寸,单位dp
         designSize: Size(375, 690),
         builder: (context,e) => GetMaterialApp(
-          translations: Intl(),
+          translations: Intr(),
           enableLog: true,
           initialRoute: Routes.main,
           getPages: Routes.getPages,

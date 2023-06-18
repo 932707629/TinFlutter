@@ -1,13 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Rx;
-import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:rxdart/rxdart.dart';
+import 'package:tin_flutter/app/intl/intr.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/network/app_connect.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/widget/header_bar.dart';
-import 'package:rxdart/rxdart.dart';
+
 import 'rx_dart_logic.dart';
 import 'rx_dart_state.dart';
 
@@ -24,7 +24,7 @@ class _RxDartPageState extends State<RxDartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HeaderBar(
-        Tr().rx_dart,
+        Intr().rx_dart,
         backgroundColor: Colors.amberAccent,
       ),
       body: Wrap(

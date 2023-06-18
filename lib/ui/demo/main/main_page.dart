@@ -1,14 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/translation.dart';
+import 'package:tin_flutter/app/intl/intr.dart';
+
 import 'dynamic_page.dart';
 import 'home_page.dart';
-import 'mine_page.dart';
 import 'main_logic.dart';
 import 'main_state.dart';
+import 'mine_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -41,12 +40,12 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: Obx( ()=>
           BottomNavigationBar(
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: Tr().home),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: Intr().home),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.dynamic_form), label: Tr().activity
+                  icon: Icon(Icons.dynamic_form), label: Intr().activity
               ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.supervisor_account), label: Tr().other
+                  icon: Icon(Icons.supervisor_account), label: Intr().other
               ),
             ],
             currentIndex: state.selectedIndex.value,

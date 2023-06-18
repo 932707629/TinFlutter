@@ -1,6 +1,7 @@
+import 'dart:convert';
+
 import 'package:tin_flutter/generated/json/base/json_field.dart';
 import 'package:tin_flutter/generated/json/chapter_info_entity.g.dart';
-import 'dart:convert';
 
 @JsonSerializable()
 class ChapterInfoEntity {
