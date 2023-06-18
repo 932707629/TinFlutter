@@ -2,12 +2,12 @@
 
 ## 环境配置要求
 
-基于Flutter2.2.3、Dart2.13.4版本开发，使用的三方库都适配了空安全。
-目前可运行于Android iOS Web三种平台
+基于Flutter3.10.5、Dart3.0.5版本开发，使用的三方库都适配了空安全。
+目前可稳定运行于Android iOS Web平台
 
-### 需要安装的Plugin: 
+### 推荐安装的Plugin: 
 - 基本配置插件: Dart、Kotlin、Flutter
-- Json to Dart 对象bean生成插件
+- FlutterJsonBeanFactory，对象bean生成插件
 - GetX GetX框架插件，用于生成GetX框架相关类和代码
 
 2021-05-02
@@ -34,6 +34,12 @@
 - 废弃日志打印(logger太花哨,缺少实用),改用自己封装的logger
 - 使用FlutterJsonBeanFactory工具,转化json为bean,很适合处理网络请求返回数据
 - 包含上述框架的简单演示源码
+
+2023-06-18更新
+ - 更新依赖插件
+ - flutter版本升级到3.10.5,dart适配版本升级到3.0.5,最低适配版本升到2.15.0
+ - 替换webview插件为功能更加完善且强大的[flutter_inappwebview](https://pub.dev/packages/flutter_inappwebview),此插件不支持web平台
+ - wechat_assets_picker适配安卓13
 
 
 ### 参考文档

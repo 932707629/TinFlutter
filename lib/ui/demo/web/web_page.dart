@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/translation.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:tin_flutter/app/intl/intr.dart';
 
 import 'web_logic.dart';
 import 'web_state.dart';
@@ -20,7 +20,7 @@ class _WebPageState extends State<WebPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(Tr().webview),
+          title: Text(Intr().webview),
           automaticallyImplyLeading: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -42,13 +42,20 @@ class _WebPageState extends State<WebPage> {
             ),
             Expanded(
               child: Container(
-                child: WebView(
-                  initialUrl: 'https://juejin.cn/post/6988699252981497893',
-                  onProgress: (progress) => {
-                    state.progress.value = progress.toDouble(),
-                    state.progressVisible.value = progress != 100,
+                child: InAppWebView(
+                  initialUrlRequest: URLRequest(url: Uri.tryParse('https://juejin.cn/user/1865248698012616')),
+                  onProgressChanged: (controller,progress){
+                        state.progress.value = progress.toDouble();
+                        state.progressVisible.value = progress != 100;
                   },
                 ),
+                // child: WebView(
+                //   initialUrl: 'https://juejin.cn/post/6988699252981497893',
+                //   onProgress: (progress) => {
+                //     state.progress.value = progress.toDouble(),
+                //     state.progressVisible.value = progress != 100,
+                //   },
+                // ),
               ),
             ),
           ],
