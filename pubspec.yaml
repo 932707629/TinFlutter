@@ -32,10 +32,12 @@ dependencies:
   flutter_easyrefresh: ^2.2.2
   fluttertoast: ^8.2.2
   get: ^4.6.5
+  dio: ^5.2.1+1
   shared_preferences: ^2.1.2
 #  path_provider: ^2.0.2
   common_utils: ^2.1.0
 #  webview_flutter: ^2.8.0
+  getwidget: ^3.1.1
   flutter_inappwebview: ^5.7.2+3
   wechat_assets_picker: ^8.5.0
   flutter_screenutil: ^5.8.4

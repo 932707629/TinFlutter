@@ -77,7 +77,7 @@ class Intr extends Translations{
       "add_moderator": "add moderator",
       "add_shopping_cart": "add shopping cart"
     },
-    'cn_ZH': {
+    'zh_ZH': {
       "app_name": "Flutter示例",
       "home": "首页",
       "activity": "活动",

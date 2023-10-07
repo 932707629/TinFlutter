@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           initialRoute: Routes.main,
           getPages: Routes.getPages,
           navigatorObservers: [RouteObservers()],
-          locale: Locale('cn','ZH'),
+          locale: Locale('zh','ZH'),
           fallbackLocale: Locale('en','EN'), ///添加一个默认语言选项，以备上面指定的语言翻译 不存在
           // supportedLocales: locales,
           localizationsDelegates: [
