@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/generated/l10n.dart';
+import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
 
 import 'multiplex_state.dart';
@@ -14,8 +14,8 @@ class MultiplexLogic extends GetxController {
   void onReady() {
     super.onReady();
     subscription = behaviorBus.on<EventTaskBean>().listen((event) {
-      logger.i("${S.current.sayHello(event.value)}");
-      showToast(S.current.sayHello(event.value));
+      // logger('sayHello'.tr);//event.value
+      showToast(Intl().sayHello);
     });
   }
 

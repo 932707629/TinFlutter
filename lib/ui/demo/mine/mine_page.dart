@@ -1,10 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tin_flutter/app/res/images.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-
-import 'main_logic.dart';
-import 'main_state.dart';
+import 'package:tin_flutter/ui/demo/main/main_logic.dart';
 
 class MinePage extends StatefulWidget {
   MinePage({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class MinePage extends StatefulWidget {
 class _MineState extends State<MinePage> {
 
   final logic = Get.find<MainLogic>();
-  final MainState state = Get.find<MainLogic>().state;
+  final state = Get.find<MainLogic>().state;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,14 @@ class _MineState extends State<MinePage> {
         title: Text(Intl().other),
       ),
       body: Center(
-        child: Text(Intl().other),
+        child: Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          direction: Axis.vertical,
+          children: [
+            // Image.asset(Images.ic_launcher),
+            Text(Intl().other)
+          ],
+        ),
       ),
     );
   }

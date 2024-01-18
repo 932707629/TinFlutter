@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import 'web_state.dart';
 
 class WebLogic extends GetxController {
@@ -8,10 +7,6 @@ class WebLogic extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    // Enable hybrid composition.
-    if (GetPlatform.isAndroid) {
-      WebView.platform = SurfaceAndroidWebView();
-    }
   }
 
   @override

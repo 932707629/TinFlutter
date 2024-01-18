@@ -1,12 +1,11 @@
 import 'dart:async';
-import 'dart:math';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/index.dart';
-import 'package:tin_flutter/generated/l10n.dart';
-
+import 'package:tin_flutter/app/global.dart';
+import 'package:tin_flutter/app/res/intl.dart';
+import 'package:tin_flutter/app/res/dimens.dart';
 import 'multiplex_logic.dart';
 import 'multiplex_state.dart';
 
@@ -29,18 +28,18 @@ class _MultiplexPageState extends State<MultiplexPage>
             physics: physics,
             slivers: [
               SliverAppBar(
-                title: Text("多布局"),
+                title: Text(Intl().multiple),
                 pinned: true,
               ),
               header as Widget,
               SliverList(
                 delegate: SliverChildListDelegate([
                   SizedBox(
-                    height: Numbers.size_150.h,
+                    height: Dimens.d_150.h,
                     child: PageView(children: getBannerWidget()),
                   ),
                   SizedBox(
-                    height: Numbers.size_150.h,
+                    height: Dimens.d_150.h,
                     child: buildGradView(context),
                   ),
                 ]),
@@ -49,12 +48,12 @@ class _MultiplexPageState extends State<MultiplexPage>
                     delegate: SliverChildBuilderDelegate((context, index) {
                       return GestureDetector(
                         onTap: () {
-                          showToast(S.of(context).sayHello(index));
+                          showToast(Intl().sayHello);
                         },
                         child: Card(
                           child: new Container(
-                            height: Numbers.size_60.h,
-                            padding: EdgeInsets.only(left: Numbers.size_20.r),
+                            height: Dimens.d_60.h,
+                            padding: EdgeInsets.only(left: Dimens.d_20.r),
                             alignment: Alignment.center,
                             child: new Text("Item $index",textAlign: TextAlign.center,),
                           ),
@@ -68,7 +67,7 @@ class _MultiplexPageState extends State<MultiplexPage>
           );
         },
         onRefresh: () async {
-          await Future.delayed(Duration(microseconds: Numbers.int_100), () {
+          await Future.delayed(Duration(microseconds: Dimens.i_100), () {
             if (mounted) {
               ///此state对象当前在树中
               state.count.value=20;
@@ -76,7 +75,7 @@ class _MultiplexPageState extends State<MultiplexPage>
           });
         },
         onLoad: () async {
-          await Future.delayed(Duration(microseconds: Numbers.int_100), () {
+          await Future.delayed(Duration(microseconds: Dimens.i_100), () {
             if (mounted) {
               logic.increase();
             }
@@ -105,7 +104,7 @@ class _MultiplexPageState extends State<MultiplexPage>
       widgets.add(
         Container(
           color: element,
-          margin: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+          margin: EdgeInsets.symmetric(horizontal: Dimens.d_15.r, vertical: Dimens.d_10.r),
         ),
       );
     });
@@ -115,25 +114,25 @@ class _MultiplexPageState extends State<MultiplexPage>
   ///构建横纵列表
   Widget buildGradView(BuildContext context) {
     List<ActionItem> items=[
-      ActionItem(Icons.ac_unit, S.of(context).ac_unit),
-      ActionItem(Icons.access_alarm, S.of(context).access_alarm),
-      ActionItem(Icons.accessibility, S.of(context).accessibility),
-      ActionItem(Icons.account_balance, S.of(context).account_balance),
-      ActionItem(Icons.account_balance_wallet, S.of(context).account_balance_wallet),
-      ActionItem(Icons.add_a_photo, S.of(context).add_a_photo),
-      ActionItem(Icons.add_moderator, S.of(context).add_moderator),
-      ActionItem(Icons.add_shopping_cart, S.of(context).add_shopping_cart),
+      ActionItem(Icons.ac_unit, Intl().ac_unit),
+      ActionItem(Icons.access_alarm, Intl().access_alarm),
+      ActionItem(Icons.accessibility, Intl().accessibility),
+      ActionItem(Icons.account_balance, Intl().account_balance),
+      ActionItem(Icons.account_balance_wallet, Intl().account_balance_wallet),
+      ActionItem(Icons.add_a_photo, Intl().add_a_photo),
+      ActionItem(Icons.add_moderator, Intl().add_moderator),
+      ActionItem(Icons.add_shopping_cart, Intl().add_shopping_cart),
     ];
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: Numbers.int_4,
-        childAspectRatio: Numbers.size_1_7,
+        crossAxisCount: Dimens.i_4,
+        childAspectRatio: Dimens.d_1_7,
       ),
       itemBuilder: (context, index) {
         var action = items[index];
         return GestureDetector(
           onTap: () {
-            showToast(S.of(context).sayHello(index));
+            showToast(Intl().sayHello);
           },
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
