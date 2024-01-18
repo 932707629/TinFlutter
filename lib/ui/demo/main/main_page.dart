@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-import '../dynamic/dynamic_page.dart';
-import '../home/home_page.dart';
 import '../mine/mine_page.dart';
+import 'dynamic_page.dart';
+import 'home_page.dart';
 import 'main_logic.dart';
 import 'main_state.dart';
 
@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
             fixedColor: Colors.blue,
             type: BottomNavigationBarType.fixed,
             onTap: _onItemTapped,
-          )
+          ),
       ),
     );
   }

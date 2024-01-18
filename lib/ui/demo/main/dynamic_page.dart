@@ -3,7 +3,9 @@ import 'package:get/get.dart';
 import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tin_flutter/ui/demo/dynamic/dynamic_logic.dart';
+import 'package:tin_flutter/app/res/intl.dart';
+
+import 'main_logic.dart';
 
 class DynamicPage extends StatefulWidget {
   @override
@@ -12,8 +14,8 @@ class DynamicPage extends StatefulWidget {
 }
 
 class _DynamicState extends State<DynamicPage> {
-  final logic = Get.find<DynamicLogic>();
-  final state = Get.find<DynamicLogic>().state;
+  final logic = Get.find<MainLogic>();
+  final state = Get.find<MainLogic>().state;
 
   final List<String> entries = <String>['A', 'B', 'C', 'D','E','F','G','H','I','J'];
   final List<int> colorCodes = <int>[900,800,700,600, 500, 400, 300, 200, 100,50];

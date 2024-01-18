@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/app_data.dart';
-import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 
 import 'storage_state.dart';

@@ -5,7 +5,8 @@ import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
-import 'package:tin_flutter/ui/demo/home/home_logic.dart';
+
+import 'main_logic.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -15,8 +16,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
-  final logic = Get.find<HomeLogic>();
-  final state = Get.find<HomeLogic>().state;
+  final logic = Get.find<MainLogic>();
+  final state = Get.find<MainLogic>().state;
 
   @override
   Widget build(BuildContext context) {

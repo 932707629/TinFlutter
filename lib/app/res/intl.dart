@@ -1,11 +1,8 @@
 
-
 import 'dart:ui';
-
 import 'package:get/get.dart';
 
 class Intl extends Translations{
-
   Intl._internal();
 
   static Intl? instance;
@@ -13,12 +10,12 @@ class Intl extends Translations{
   static getInstance() {
     if (instance == null) {
       instance = Intl._internal();
+      // instance?.onInit();
     }
     return instance;
   }
 
   factory Intl() => getInstance();
-
 
   var locales = [const Locale('zh','ZH'),const Locale('en','US')];
 
@@ -34,17 +31,15 @@ class Intl extends Translations{
   String get multiple => 'multiple'.tr;
   String get app_name => 'app_name'.tr;
   String get greet => 'greet'.tr;
+
   String get language => 'language'.tr;
   String get storage => 'storage'.tr;
-  String get dio_get => 'dio_get'.tr;
-  String get dio_post => 'dio_post'.tr;
+  String get theme => 'theme'.tr;
   String get permission => 'permission'.tr;
   String get webview => 'webview'.tr;
   String get pictureSelector => 'pictureSelector'.tr;
   String get rx_dart => 'rx_dart'.tr;
-  String get pick_time => 'pick_time'.tr;
   String get userEventBus => 'userEventBus'.tr;
-  String get permissionDenied => 'permissionDenied'.tr;
   String get ac_unit => 'ac_unit'.tr;
   String get access_alarm => 'access_alarm'.tr;
   String get accessibility => 'accessibility'.tr;
@@ -56,7 +51,6 @@ class Intl extends Translations{
   String get rx_map => 'rx_map'.tr;
   String get rx_expand => 'rx_expand'.tr;
   String get rx_merge => 'rx_merge'.tr;
-  String get theme => 'theme'.tr;
 
 
   @override
@@ -92,10 +86,10 @@ class Intl extends Translations{
       "account_balance_wallet": "account balance wallet",
       "add_a_photo": "add a photo",
       "add_moderator": "add moderator",
-      "add_shopping_cart": "add shopping cart",
-      "rx_map":"Map",
-      "rx_expand":"Expand",
-      "rx_merge":"Merge",
+      "rx_map": "rx_map",
+      "rx_expand": "rx_expand",
+      "rx_merge": "rx_merge",
+
     },
     'cn_ZH': {
       "app_name": "Flutter示例",
@@ -117,7 +111,7 @@ class Intl extends Translations{
       "pictureSelector": "图片选择器",
       "rx_dart": "RxDart使用",
       "pick_time": "选择时间",
-      "sayHello": "你好 {name}",
+      "sayHello": "你好",
       "multiple": "多布局",
       "userEventBus": "欢迎使用EventBus",
       "permissionDenied": "权限已被拒绝",
@@ -129,9 +123,9 @@ class Intl extends Translations{
       "add_a_photo": "摄影",
       "add_moderator": "安全",
       "add_shopping_cart": "购物",
-      "rx_map":"了解信息",
-      "rx_expand":"扩展",
-      "rx_merge":"合并",
+      "rx_map": "rx_map",
+      "rx_expand": "rx_expand",
+      "rx_merge": "rx_merge",
     }
   };
 
