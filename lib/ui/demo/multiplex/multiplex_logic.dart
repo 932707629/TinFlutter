@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
 
 import 'multiplex_state.dart';

@@ -1,5 +1,7 @@
 
 
+import 'dart:ui';
+
 import 'package:get/get.dart';
 
 class Intl extends Translations{
@@ -16,6 +18,9 @@ class Intl extends Translations{
   }
 
   factory Intl() => getInstance();
+
+
+  var locales = [const Locale('zh','ZH'),const Locale('en','US')];
 
 
   String get connect => 'connect'.tr;

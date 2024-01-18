@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/app/res/images.dart';
 import 'package:tin_flutter/ui/demo/mine/mine_logic.dart';
 

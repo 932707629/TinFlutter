@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
   flutter:
@@ -26,18 +26,22 @@ dependencies:
   #Widget国际化支持
   flutter_localizations:
     sdk: flutter
-  permission_handler: ^10.0.0
-  rxdart: ^0.27.5
+  permission_handler: ^11.2.0
+  rxdart: ^0.27.7
   event_bus: ^2.0.0
   flutter_easyrefresh: ^2.2.2
-  fluttertoast: ^8.0.9
-  get: ^4.6.5
-  shared_preferences: ^2.0.15
+  fluttertoast: ^8.2.4
+  get: ^4.6.6
+  dio: ^5.3.3
+  retrofit: ^4.0.3
+  json_annotation: ^4.8.1
+  shared_preferences: ^2.2.1
 #  path_provider: ^2.0.2
   common_utils: ^2.1.0
-  webview_flutter: ^3.0.4
-  wechat_assets_picker: ^8.0.2
-  flutter_screenutil: ^5.5.4
+  flutter_inappwebview: ^6.0.0
+#  wechat_assets_picker: ^8.8.1+1
+  flutter_screenutil: ^5.9.0
+  path_provider: ^2.1.2
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.5
@@ -46,6 +50,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^2.1.0
+  retrofit_generator: ^7.0.8
+  json_serializable: ^6.6.2
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -89,6 +95,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-flutter_intl:
-  enabled: true
 

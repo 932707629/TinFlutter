@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
-import 'package:tin_flutter/app/logger.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
 import 'package:tin_flutter/ui/demo/home/home_logic.dart';
-import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -78,8 +76,8 @@ class _HomeState extends State<HomePage> {
                   child: Text(Intl().webview)),
               TextButton(
                 onPressed: () => {
-                  AssetPicker.pickAssets(context)
-                      .then((value) => {logger('文件选择的结果${value?.length}')})
+                  // AssetPicker.pickAssets(context)
+                  //     .then((value) => {logger('文件选择的结果${value?.length}')})
                 },
                 child: Text(Intl().pictureSelector),
               ),

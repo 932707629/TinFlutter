@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Rx;
-import 'package:tin_flutter/app/intl/intl.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/network/app_connect.dart';
 import 'package:tin_flutter/app/res/dimens.dart';

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
 import 'storage_logic.dart';
 import 'storage_state.dart';

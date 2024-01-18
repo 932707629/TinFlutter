@@ -2,7 +2,6 @@
 import 'package:get/get.dart';
 import 'package:get/get_connect/connect.dart';
 import 'package:tin_flutter/app/logger.dart';
-import 'package:rxdart/rxdart.dart' as Rx;
 
 class AppConnect extends GetConnect{
 

@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 
 import 'web_logic.dart';
 import 'web_state.dart';
@@ -42,11 +42,26 @@ class _WebPageState extends State<WebPage> {
             ),
             Expanded(
               child: Container(
-                child: WebView(
-                  initialUrl: 'https://juejin.cn/post/6988699252981497893',
-                  onProgress: (progress) => {
-                    state.progress.value = progress.toDouble(),
-                    state.progressVisible.value = progress != 100,
+                child: InAppWebView(
+                  initialUrlRequest: URLRequest(url: WebUri('https://juejin.cn/post/6988699252981497893')),
+                  // onWebViewCreated: (controller)=> logic.loadPage(controller),
+                  initialOptions: InAppWebViewGroupOptions(
+                    android: AndroidInAppWebViewOptions(
+                      loadWithOverviewMode: false,
+                      overScrollMode: AndroidOverScrollMode.OVER_SCROLL_NEVER,
+                      displayZoomControls: false,
+                      builtInZoomControls: false,
+                      useWideViewPort: false,
+                    ),
+                    ios: IOSInAppWebViewOptions(
+                      disallowOverScroll: true,
+                      enableViewportScale: true,
+                      ignoresViewportScaleLimits: true,
+                    ),
+                  ),
+                  onProgressChanged: (controller,pg){
+                    state.progress.value = pg.toDouble();
+                    state.progressVisible.value = pg != 100;
                   },
                 ),
               ),

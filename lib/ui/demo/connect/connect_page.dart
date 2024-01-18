@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/intl.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'connect_logic.dart';
 import 'connect_state.dart';
 
@@ -43,7 +43,9 @@ class _ConnectPageState extends State<ConnectPage> {
               ),
             ],
           ),
-          Obx(()=> Text('${state.result}'),)
+          Expanded(
+            child: Obx(()=> Text('${state.result}'),),
+          ),
         ],
       ),
     );
