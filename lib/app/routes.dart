@@ -4,8 +4,6 @@ import 'package:tin_flutter/ui/demo/connect/connect_binding.dart';
 import 'package:tin_flutter/ui/demo/connect/connect_page.dart';
 import 'package:tin_flutter/ui/demo/count/count_binding.dart';
 import 'package:tin_flutter/ui/demo/count/count_page.dart';
-import 'package:tin_flutter/ui/demo/loading/loading_binding.dart';
-import 'package:tin_flutter/ui/demo/loading/loading_page.dart';
 import 'package:tin_flutter/ui/demo/main/main_binding.dart';
 import 'package:tin_flutter/ui/demo/main/main_page.dart';
 import 'package:tin_flutter/ui/demo/multiplex/multiplex_binding.dart';
@@ -25,7 +23,7 @@ class Routes {
   static final String connect = "/connect";
   static final String webview = "/webview";
   static final String rx_dart = "/rx_dart";
-  static final String loading = "/loading";
+  // static final String loading = "/loading";
 
 
   static final List<GetPage> getPages=[
@@ -36,7 +34,7 @@ class Routes {
     GetPage(name: connect,binding: ConnectBinding(), page: () => ConnectPage()),
     GetPage(name: webview,binding: WebBinding(), page: () => WebPage()),
     GetPage(name: rx_dart,binding: RxDartBinding(), page: () => RxDartPage()),
-    GetPage(name: loading,binding: LoadingBinding(), page: () => LoadingPage()),
+    // GetPage(name: loading,binding: LoadingBinding(), page: () => LoadingPage()),
 
   ];
 
