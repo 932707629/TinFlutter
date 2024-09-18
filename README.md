@@ -2,7 +2,7 @@
 
 ## 环境配置要求
 
-基于Flutter3.16.1、Dart3.2.1版本开发，使用的三方库都适配了空安全。
+基于Flutter3.22.2、Dart3.4.3版本开发，使用的三方库都适配了空安全。
 目前可运行于Android iOS Web三种平台，去掉不支持的依赖库依然适用于windows/linux/macos平台
 
 ### 需要安装的Plugin: 
