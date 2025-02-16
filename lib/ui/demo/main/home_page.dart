@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/ui/bean/event_task_bean.dart';
@@ -29,8 +28,8 @@ class _HomeState extends State<HomePage> {
       body: Column(
         children: [
           Wrap(
-            spacing: Dimens.d_8,
-            runSpacing: Dimens.d_4,
+            spacing: 8,
+            runSpacing: 4,
             alignment: WrapAlignment.start,
             children: [
               TextButton(

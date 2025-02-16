@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tin_flutter/app/res/intl.dart';
 
@@ -28,11 +27,11 @@ class _DynamicState extends State<DynamicPage> {
         title: Text(Intl().activity),
       ),
       body: Obx( ()=> ListView.builder(
-          padding: EdgeInsets.all(Dimens.d_8.r),
+          padding: EdgeInsets.all(8.r),
           itemCount: state.count.value,
           itemBuilder:(BuildContext context, int index) {
             return Container(
-              height: Dimens.d_30.h,
+              height: 30.h,
               color: Colors.amber[colorCodes[index%10]],
               child: Center(child: Text('Entry ${entries[index%10]}')),
             );

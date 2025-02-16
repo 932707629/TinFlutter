@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'count_logic.dart';
 import 'count_state.dart';
@@ -30,7 +29,7 @@ class _CountPageState extends State<CountPage> {
       body: Center(
         child: Obx(
           () => Text('${state.count.value}',
-              style: TextStyle(fontSize: Dimens.d_30.sp)),
+              style: TextStyle(fontSize: 30.sp)),
         ),
       ),
       floatingActionButton: FloatingActionButton(

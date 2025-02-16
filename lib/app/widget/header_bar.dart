@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
 
 class HeaderBar extends StatefulWidget implements PreferredSizeWidget {
 
@@ -17,7 +16,7 @@ class HeaderBar extends StatefulWidget implements PreferredSizeWidget {
   State<StatefulWidget> createState() => new HeaderBarState();
 
   @override
-  Size get preferredSize => new Size.fromHeight(Dimens.d_56.h);
+  Size get preferredSize => new Size.fromHeight(56.h);
 
 }
 
@@ -43,7 +42,7 @@ class HeaderBarState extends State<HeaderBar> {
             alignment: Alignment.center,
             child: Text(
               widget.title,
-              style: TextStyle(color: Colors.white, fontSize: Dimens.d_18.sp),
+              style: TextStyle(color: Colors.white, fontSize: 18.sp),
             ),
           ),
         ],

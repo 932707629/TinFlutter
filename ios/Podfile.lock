@@ -1,76 +1,59 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_inappwebview (0.0.1):
+  - flutter_inappwebview_ios (0.0.1):
     - Flutter
-    - flutter_inappwebview/Core (= 0.0.1)
-    - OrderedSet (~> 5.0)
-  - flutter_inappwebview/Core (0.0.1):
+    - flutter_inappwebview_ios/Core (= 0.0.1)
+    - OrderedSet (~> 6.0.3)
+  - flutter_inappwebview_ios/Core (0.0.1):
     - Flutter
-    - OrderedSet (~> 5.0)
+    - OrderedSet (~> 6.0.3)
   - fluttertoast (0.0.2):
     - Flutter
-    - Toast
-  - OrderedSet (5.0.0)
+  - OrderedSet (6.0.3)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - permission_handler_apple (9.1.0):
+  - permission_handler_apple (9.3.0):
     - Flutter
-  - photo_manager (2.0.0):
-    - Flutter
-    - FlutterMacOS
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - Toast (4.0.0)
-  - video_player_avfoundation (0.0.1):
-    - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
+  - flutter_inappwebview_ios (from `.symlinks/plugins/flutter_inappwebview_ios/ios`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
-  - photo_manager (from `.symlinks/plugins/photo_manager/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
-  - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/ios`)
 
 SPEC REPOS:
   trunk:
     - OrderedSet
-    - Toast
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
-  flutter_inappwebview:
-    :path: ".symlinks/plugins/flutter_inappwebview/ios"
+  flutter_inappwebview_ios:
+    :path: ".symlinks/plugins/flutter_inappwebview_ios/ios"
   fluttertoast:
     :path: ".symlinks/plugins/fluttertoast/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   permission_handler_apple:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
-  photo_manager:
-    :path: ".symlinks/plugins/photo_manager/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
-  video_player_avfoundation:
-    :path: ".symlinks/plugins/video_player_avfoundation/ios"
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
-  fluttertoast: fafc4fa4d01a6a9e4f772ecd190ffa525e9e2d9c
-  OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
-  path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
-  permission_handler_apple: 8f116445eff3c0e7c65ad60f5fef5490aa94b4e4
-  photo_manager: 4f6810b7dfc4feb03b461ac1a70dacf91fba7604
-  shared_preferences_foundation: e2dae3258e06f44cc55f49d42024fd8dd03c590c
-  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  video_player_avfoundation: 81e49bb3d9fb63dccf9fa0f6d877dc3ddbeac126
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_inappwebview_ios: 6f63631e2c62a7c350263b13fa5427aedefe81d4
+  fluttertoast: 21eecd6935e7064cc1fcb733a4c5a428f3f24f0f
+  OrderedSet: e539b66b644ff081c73a262d24ad552a69be3a94
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
+  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
 
-PODFILE CHECKSUM: 7368163408c647b7eb699d0d788ba6718e18fb8d
+PODFILE CHECKSUM: 4e8f8b2be68aeea4c0d5beb6ff1e79fface1d048
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2

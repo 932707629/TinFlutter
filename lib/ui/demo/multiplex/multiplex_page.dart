@@ -5,7 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
+import 'package:tin_flutter/generated/gen/colors.gen.dart';
+import '../../../generated/gen/assets.gen.dart';
 import 'multiplex_logic.dart';
 import 'multiplex_state.dart';
 
@@ -35,13 +36,10 @@ class _MultiplexPageState extends State<MultiplexPage>
               SliverList(
                 delegate: SliverChildListDelegate([
                   SizedBox(
-                    height: Dimens.d_150.h,
+                    height: 150.h,
                     child: PageView(children: getBannerWidget()),
                   ),
-                  SizedBox(
-                    height: Dimens.d_150.h,
-                    child: buildGradView(context),
-                  ),
+                  buildGridView(context),
                 ]),
               ),
               Obx( ()=> SliverList(
@@ -52,8 +50,8 @@ class _MultiplexPageState extends State<MultiplexPage>
                         },
                         child: Card(
                           child: new Container(
-                            height: Dimens.d_60.h,
-                            padding: EdgeInsets.only(left: Dimens.d_20.r),
+                            height: 60.h,
+                            padding: EdgeInsets.only(left: 20.r),
                             alignment: Alignment.center,
                             child: new Text("Item $index",textAlign: TextAlign.center,),
                           ),
@@ -67,7 +65,7 @@ class _MultiplexPageState extends State<MultiplexPage>
           );
         },
         onRefresh: () async {
-          await Future.delayed(Duration(microseconds: Dimens.i_100), () {
+          await Future.delayed(Duration(microseconds: 100), () {
             if (mounted) {
               ///此state对象当前在树中
               state.count.value=20;
@@ -75,7 +73,7 @@ class _MultiplexPageState extends State<MultiplexPage>
           });
         },
         onLoad: () async {
-          await Future.delayed(Duration(microseconds: Dimens.i_100), () {
+          await Future.delayed(Duration(microseconds: 100), () {
             if (mounted) {
               logic.increase();
             }
@@ -104,7 +102,7 @@ class _MultiplexPageState extends State<MultiplexPage>
       widgets.add(
         Container(
           color: element,
-          margin: EdgeInsets.symmetric(horizontal: Dimens.d_15.r, vertical: Dimens.d_10.r),
+          margin: EdgeInsets.symmetric(horizontal: 15.r, vertical: 10.r),
         ),
       );
     });
@@ -112,7 +110,7 @@ class _MultiplexPageState extends State<MultiplexPage>
   }
 
   ///构建横纵列表
-  Widget buildGradView(BuildContext context) {
+  Widget buildGridView(BuildContext context) {
     List<ActionItem> items=[
       ActionItem(Icons.ac_unit, Intl().ac_unit),
       ActionItem(Icons.access_alarm, Intl().access_alarm),
@@ -124,9 +122,10 @@ class _MultiplexPageState extends State<MultiplexPage>
       ActionItem(Icons.add_shopping_cart, Intl().add_shopping_cart),
     ];
     return GridView.builder(
+      shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: Dimens.i_4,
-        childAspectRatio: Dimens.d_1_7,
+        crossAxisCount: 4,
+        childAspectRatio: 1.7,
       ),
       itemBuilder: (context, index) {
         var action = items[index];

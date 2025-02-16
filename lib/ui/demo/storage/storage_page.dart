@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
 import 'storage_logic.dart';
 import 'storage_state.dart';
 
@@ -31,7 +30,7 @@ class _StoragePageState extends State<StoragePage> {
         child: Obx(
               () => Text(
                   '${state.localIndex.value}',
-                  style: TextStyle(fontSize: Dimens.d_30.sp)
+                  style: TextStyle(fontSize: 30.sp)
               ),
         ),
       ),

@@ -2,7 +2,7 @@
 
 ## 环境配置要求
 
-基于Flutter3.22.2、Dart3.4.3版本开发，使用的三方库都适配了空安全。
+基于Flutter3.27.1、Dart3.6.0版本开发，使用的三方库都适配了空安全。
 目前可运行于Android iOS Web三种平台，去掉不支持的依赖库依然适用于windows/linux/macos平台
 
 ### 需要安装的Plugin: 
@@ -11,31 +11,13 @@
 - Json to Dart 对象bean生成插件
 - GetX GetX框架插件，用于生成GetX框架相关类和代码
 
-2021-05-02
-新增
-- 刷新加载框架[EasyRefresh](https://github.com/xuelongqy/flutter_easyrefresh)
-- Toast框架[FlutterToast](https://github.com/ponnamkarthik/FlutterToast)
-- 事件总线[EventBus](https://github.com/marcojakob/dart-event-bushttps://github.com/marcojakob/dart-event-bus)
-- 异步处理[RxDart](https://github.com/ReactiveX/rxdart)
-- 权限申请[permission_handler](https://github.com/Baseflow/flutter-permission-handler)
-- 包含上述框架的简单演示源码
 
-2021-08-08
-新增
-****注意 此次更新涉及空安全升级 项目所依赖的三方库需要支持空安全
-- Flutter项目框架[GetX](https://github.com/jonataslaw/getx)
-- 轻量级存储框架[Shared preferences plugin](https://pub.dev/packages/shared_preferences)
-- 屏幕适配框架[flutter_screenutil](https://pub.dev/packages/flutter_screenutil)
-- 包含上述框架的简单演示源码
+2025-02-16
+- 新增依赖插件[flutter_gen](https://pub.dev/packages/flutter_gen)处理资源文件(image/flutter_svg/rive/lottie/color/font)的快速配置
+- 升级Flutter版本到3.27.1
 
-2022-08-20
-新增
+2024-09-18
 - 更新依赖插件
-- 废弃之前使用的intl插件,使用getX自带的国际化
-- 废弃日志打印(logger太花哨,缺少实用),改用自己封装的logger
-- 使用FlutterJsonBeanFactory工具,转化json为bean,很适合处理网络请求返回数据
-- 包含上述框架的简单演示源码
-
 
 2024-01-18
 新增
@@ -46,11 +28,30 @@
 - 使用[retrofit](https://pub.dev/packages/retrofit)接管dio的请求处理
 - 包含上述框架的简单演示源码
 
-
-
-2024-09-18
+2022-08-20
+新增
 - 更新依赖插件
+- 废弃之前使用的intl插件,使用getX自带的国际化
+- 废弃日志打印(logger太花哨,缺少实用),改用自己封装的logger
+- 使用FlutterJsonBeanFactory工具,转化json为bean,很适合处理网络请求返回数据
+- 包含上述框架的简单演示源码
 
+2021-08-08
+新增
+****注意 此次更新涉及空安全升级 项目所依赖的三方库需要支持空安全
+- Flutter项目框架[GetX](https://github.com/jonataslaw/getx)
+- 轻量级存储框架[Shared preferences plugin](https://pub.dev/packages/shared_preferences)
+- 屏幕适配框架[flutter_screenutil](https://pub.dev/packages/flutter_screenutil)
+- 包含上述框架的简单演示源码
+
+2021-05-02
+新增
+- 刷新加载框架[EasyRefresh](https://github.com/xuelongqy/flutter_easyrefresh)
+- Toast框架[FlutterToast](https://github.com/ponnamkarthik/FlutterToast)
+- 事件总线[EventBus](https://github.com/marcojakob/dart-event-bushttps://github.com/marcojakob/dart-event-bus)
+- 异步处理[RxDart](https://github.com/ReactiveX/rxdart)
+- 权限申请[permission_handler](https://github.com/Baseflow/flutter-permission-handler)
+- 包含上述框架的简单演示源码
 
 
 

@@ -4,7 +4,6 @@ import 'package:get/get.dart' hide Rx;
 import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/app/logger.dart';
 import 'package:tin_flutter/app/network/app_connect.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
 import 'package:tin_flutter/app/widget/header_bar.dart';
 import 'package:rxdart/rxdart.dart';
 import 'rx_dart_logic.dart';
@@ -27,7 +26,7 @@ class _RxDartPageState extends State<RxDartPage> {
         backgroundColor: Colors.amberAccent,
       ),
       body: Wrap(
-        spacing: Dimens.d_4,
+        spacing: 4,
         children: [
           TextButton(
             onPressed: () => {

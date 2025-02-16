@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/res/dimens.dart';
+
 
 class MainState {
 
@@ -8,7 +8,7 @@ class MainState {
   }
 
 
-  var count = Dimens.i_40.obs;
+  var count = 40.obs;
   var selectedIndex = 0.obs;
 
 
