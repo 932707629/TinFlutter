@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/intr.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 import 'package:tin_flutter/app/res/dimens.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 
 import 'main_logic.dart';
-import 'main_state.dart';
 
 class DynamicPage extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class DynamicPage extends StatefulWidget {
 
 class _DynamicState extends State<DynamicPage> {
   final logic = Get.find<MainLogic>();
-  final MainState state = Get.find<MainLogic>().state;
+  final state = Get.find<MainLogic>().state;
 
   final List<String> entries = <String>['A', 'B', 'C', 'D','E','F','G','H','I','J'];
   final List<int> colorCodes = <int>[900,800,700,600, 500, 400, 300, 200, 100,50];
@@ -25,7 +25,7 @@ class _DynamicState extends State<DynamicPage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(Intr().activity),
+        title: Text(Intl().activity),
       ),
       body: Obx( ()=> ListView.builder(
           padding: EdgeInsets.all(Dimens.d_8.r),

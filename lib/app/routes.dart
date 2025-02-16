@@ -23,8 +23,6 @@ class Routes {
   static final String connect = "/connect";
   static final String webview = "/webview";
   static final String rx_dart = "/rx_dart";
-  // static final String loading = "/loading";
-
 
   static final List<GetPage> getPages=[
     GetPage(name: main, binding: MainBinding(), page: () => MainPage()),
@@ -34,7 +32,6 @@ class Routes {
     GetPage(name: connect,binding: ConnectBinding(), page: () => ConnectPage()),
     GetPage(name: webview,binding: WebBinding(), page: () => WebPage()),
     GetPage(name: rx_dart,binding: RxDartBinding(), page: () => RxDartPage()),
-    // GetPage(name: loading,binding: LoadingBinding(), page: () => LoadingPage()),
 
   ];
 

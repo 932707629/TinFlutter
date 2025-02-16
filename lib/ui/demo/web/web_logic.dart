@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import 'web_state.dart';
 
 class WebLogic extends GetxController {

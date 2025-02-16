@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
-import 'package:tin_flutter/app/intl/intr.dart';
+import 'package:tin_flutter/app/res/intl.dart';
 
 import 'web_logic.dart';
 import 'web_state.dart';
@@ -20,7 +20,7 @@ class _WebPageState extends State<WebPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(Intr().webview),
+          title: Text(Intl().webview),
           automaticallyImplyLeading: true,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -43,19 +43,27 @@ class _WebPageState extends State<WebPage> {
             Expanded(
               child: Container(
                 child: InAppWebView(
-                  initialUrlRequest: URLRequest(url: Uri.tryParse('https://juejin.cn/user/1865248698012616')),
-                  onProgressChanged: (controller,progress){
-                        state.progress.value = progress.toDouble();
-                        state.progressVisible.value = progress != 100;
+                  initialUrlRequest: URLRequest(url: WebUri('https://juejin.cn/post/6988699252981497893')),
+                  // onWebViewCreated: (controller)=> logic.loadPage(controller),
+                  initialOptions: InAppWebViewGroupOptions(
+                    android: AndroidInAppWebViewOptions(
+                      loadWithOverviewMode: false,
+                      overScrollMode: AndroidOverScrollMode.OVER_SCROLL_NEVER,
+                      displayZoomControls: false,
+                      builtInZoomControls: false,
+                      useWideViewPort: false,
+                    ),
+                    ios: IOSInAppWebViewOptions(
+                      disallowOverScroll: true,
+                      enableViewportScale: true,
+                      ignoresViewportScaleLimits: true,
+                    ),
+                  ),
+                  onProgressChanged: (controller,pg){
+                    state.progress.value = pg.toDouble();
+                    state.progressVisible.value = pg != 100;
                   },
                 ),
-                // child: WebView(
-                //   initialUrl: 'https://juejin.cn/post/6988699252981497893',
-                //   onProgress: (progress) => {
-                //     state.progress.value = progress.toDouble(),
-                //     state.progressVisible.value = progress != 100,
-                //   },
-                // ),
               ),
             ),
           ],

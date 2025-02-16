@@ -2,6 +2,8 @@
 import 'package:event_bus/event_bus.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:rxdart/rxdart.dart';
+
+
 ///普通事件
 EventBus eventBus=new EventBus();
 ///可用于黏性事件
@@ -19,6 +21,16 @@ final isDebug = !inProduct();
 bool inProduct(){
   return const bool.fromEnvironment("dart.vm.product");
 }
+
+
+class Global{
+
+  static const base_url = "https://www.wanandroid.com/";//:8860
+
+
+
+}
+
 
 
 
