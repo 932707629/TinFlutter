@@ -83,11 +83,11 @@
 ### retrofit适用命令
 
 # dart
-dart pub run build_runner build
+- dart pub run build_runner build
 
 # flutter
-flutter pub run build_runner build
-flutter pub run build_runner build --delete-conflicting-outputs
+- flutter pub run build_runner build
+- flutter pub run build_runner build --delete-conflicting-outputs
 
 
 
