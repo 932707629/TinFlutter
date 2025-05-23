@@ -78,7 +78,7 @@
 ### 问题
 
 - flutter for web中的跨域问题[flutter for web跨域解决方案](https://www.cnblogs.com/lcosima/p/14504254.html)
-
+- fluttergen 和 fvm冲突导致无法使用时,可编辑$HOME/.pub-cache/bin/fluttergen增加fvm 
 
 ### retrofit适用命令
 
@@ -87,6 +87,7 @@ dart pub run build_runner build
 
 # flutter
 flutter pub run build_runner build
+flutter pub run build_runner build --delete-conflicting-outputs
 
 
 
