@@ -79,6 +79,7 @@
 
 - flutter for web中的跨域问题[flutter for web跨域解决方案](https://www.cnblogs.com/lcosima/p/14504254.html)
 - fluttergen 和 fvm冲突导致无法使用时,可编辑$HOME/.pub-cache/bin/fluttergen增加fvm 
+- fluttergen 命令报错时,请检查环境变量中是否配置了PUB_HOSTED_URL和FLUTTER_STORAGE_BASE_URL
 
 ### retrofit适用命令
 

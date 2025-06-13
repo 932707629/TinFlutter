@@ -7,7 +7,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tin_flutter/app/global.dart';
 import 'package:tin_flutter/app/network/http_service.dart';
 import 'package:tin_flutter/app/res/intl.dart';
-import 'package:tin_flutter/app/logger.dart';
+import 'package:tin_flutter/app/tools/logger.dart';
 import 'package:tin_flutter/app/routes.dart';
 import 'app/app_data.dart';
 import 'app/route_observers.dart';
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
           ],
           builder: (context,widget){
             return MediaQuery(///设置文字大小不随系统设置改变
-                data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(1.0)),
                 child: widget ?? Container()
             );
           },

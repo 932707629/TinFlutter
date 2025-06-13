@@ -2,7 +2,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:tin_flutter/app/logger.dart';
+import 'package:tin_flutter/app/tools/logger.dart';
 import 'package:tin_flutter/app/network/error_response_handler.dart';
 import 'package:tin_flutter/app/network/retrofit_client.dart';
 import 'package:tin_flutter/ui/bean/base_response_entity.dart';

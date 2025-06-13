@@ -1,6 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
-import 'package:tin_flutter/app/logger.dart';
+import 'package:tin_flutter/app/tools/logger.dart';
 
 import 'global.dart';
 

@@ -1,6 +1,6 @@
 
 import 'package:tin_flutter/app/global.dart';
-import 'package:tin_flutter/app/logger.dart';
+import 'package:tin_flutter/app/tools/logger.dart';
 
 ///app全局错误监听处理
 class ErrorResponseHandler {
