@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '1.9.10'
     repositories {
         //阿里云仓库总览 https://developer.aliyun.com/mvn/guide
         maven { url 'https://maven.aliyun.com/repository/google' }
